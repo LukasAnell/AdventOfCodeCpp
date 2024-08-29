@@ -8,12 +8,12 @@
 #include <vector>
 
 
-class dayOne {
+class DayOne {
+public:
     std::vector<std::string> fileContents;
 
-    public:
-    dayOne(const std::string& fileName);
-    void main();
+    explicit DayOne(const std::string& fileName);
+    [[nodiscard]] int bothParts(int topX) const;
 };
 
 

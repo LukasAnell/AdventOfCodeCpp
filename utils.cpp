@@ -4,15 +4,28 @@
 
 #include "utils.h"
 
+#include <filesystem>
 #include <fstream>
+#include <iostream>
 #include <string.h>
 
 std::vector<std::string> utils::readFile(const std::string& fileName, const int dayNumber) {
-    std::ifstream file("Year2022/Day" +  std::to_string(dayNumber) + "/" + fileName + ".txt");
-    std::string str;
-    std::vector<std::string> result;
-    while (std::getline(file, str)) {
-        result.push_back(str);
+    const std::string fullFileName = "..\\Year2022\\Day" +  std::to_string(dayNumber) + "\\" + fileName;
+    std::ifstream file(fullFileName);
+
+    std::vector<std::string> output;
+    if (file.is_open()) {
+        std::string line;
+        while(std::getline(file, line)) {\
+            if(line.empty()) {
+                output.emplace_back("");
+            } else {
+                output.push_back(line);
+            }
+        }
+    } else {
+        std::cout << "File failed to open" << std::endl;
     }
-    return result;
+
+    return output;
 }
