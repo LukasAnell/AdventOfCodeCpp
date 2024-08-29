@@ -15,6 +15,7 @@ public:
     explicit DayThree(const std::string& fileName);
     [[nodiscard]] int partOne() const;
     [[nodiscard]] int partTwo() const;
+    static bool checkOthers(char character, const std::vector<std::string> &rucksacks, const std::pair<int, int> &rucksackIndices);
 };
 
 

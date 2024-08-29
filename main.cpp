@@ -28,7 +28,7 @@ int main() {
     std::cout << dayThreeSample.partTwo() << std::endl;
     const DayThree dayThree("input.txt");
     std::cout << dayThree.partOne() << std::endl;
-    // std::cout << dayThree.partTwo() << std::endl;
+    std::cout << dayThree.partTwo() << std::endl;
     std::cout << std::endl;
 
     return 0;

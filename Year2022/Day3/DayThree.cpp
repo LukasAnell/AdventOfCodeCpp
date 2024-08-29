@@ -61,12 +61,47 @@ int DayThree::partTwo() const {
         rucksacks.push_back(fileContents[i + 1]);
         rucksacks.push_back(fileContents[i + 2]);
 
+        std::map<int, std::pair<int, int>> numMap;
+        numMap.emplace(0, std::make_pair(1, 2));
+        numMap.emplace(1, std::make_pair(0, 2));
+        numMap.emplace(2, std::make_pair(0, 1));
 
+        bool foundInBoth = false;
+        for(int j = 0; j < rucksacks.size(); j++) {
+            for(int k = 0; k < rucksacks[j].size(); k++) {
+                foundInBoth = checkOthers(rucksacks[j].at(k), rucksacks, numMap.at(j));
+                if(foundInBoth) {
+                    sum += priorityMap.at(rucksacks[j].at(k));
+                    break;
+                }
+            }
+            if(foundInBoth) {
+                break;
+            }
+        }
     }
     return sum;
 }
 
-bool checkOthers(int num1, int num2) {
+bool DayThree::checkOthers(const char character, const std::vector<std::string> &rucksacks, const std::pair<int, int> &rucksackIndices) {
+    const std::string& first = rucksacks[rucksackIndices.first];
+    const std::string& second = rucksacks[rucksackIndices.second];
 
+    bool foundInFirst = false;
+    for(int i = 0; i < first.length(); i++) {
+        if(character == first.at(i)) {
+            foundInFirst = true;
+            break;
+        }
+    }
+
+    bool foundInSecond = false;
+    for(int i = 0; i < second.length(); i++) {
+        if(character == second.at(i)) {
+            foundInSecond = true;
+            break;
+        }
+    }
+
+    return foundInFirst && foundInSecond;
 }
-
