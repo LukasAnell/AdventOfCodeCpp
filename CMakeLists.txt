@@ -7,4 +7,10 @@ add_executable(AdventOfCode main.cpp
         Year2022/Day1/dayOne.cpp
         Year2022/Day1/dayOne.h
         utils.cpp
-        utils.h)
+        utils.h
+        Year2022/Day2/DayTwo.cpp
+        Year2022/Day2/DayTwo.h
+        Year2022/Day2/DayTwo.cpp
+        Year2022/Day2/DayTwo.h
+        Year2022/Day3/DayThree.cpp
+        Year2022/Day3/DayThree.h)
