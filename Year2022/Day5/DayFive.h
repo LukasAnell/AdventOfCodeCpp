@@ -13,8 +13,9 @@ public:
     std::vector<std::string> fileContents;
 
     explicit DayFive(const std::string& fileName);
-    [[nodiscard]] char partOne() const;
-    [[nodiscard]] int partTwo() const;
+    [[nodiscard]] std::string partOne() const;
+    [[nodiscard]] std::string partTwo() const;
+    static int findMaxColumnLength(const std::vector<std::vector<char>>& vec) ;
 
 };
 
