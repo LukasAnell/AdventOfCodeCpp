@@ -65,10 +65,7 @@ int DayTwo::partTwo() const {
     int score = 0;
     for(std::string line : fileContents) {
         const char opponentPick = valueMap.at(line.at(0));
-        char selfPick = valueMap.at(line.at(2));
-        const int selfPoints = pointsMap.at(selfPick);
-
-        switch(selfPick) {
+        switch(char selfPick = valueMap.at(line.at(2))) {
             case 'R':
                 switch(opponentPick) {
                     case 'R':
