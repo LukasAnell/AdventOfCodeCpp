@@ -9,7 +9,7 @@ DaySix::DaySix(const std::string &fileName) {
     fileContents = utils::readFile(fileName, 6);
 }
 
-int DaySix::bothParts(int distinctAmount) const {
+int DaySix::bothParts(const int distinctAmount) const {
     const std::string line = fileContents[0];
     for(int i = 0; i < line.length() - distinctAmount; i++) {
         std::string currentSequence = line.substr(i, distinctAmount);
@@ -29,4 +29,5 @@ int DaySix::bothParts(int distinctAmount) const {
             return i + distinctAmount;
         }
     }
+    return 0;
 }

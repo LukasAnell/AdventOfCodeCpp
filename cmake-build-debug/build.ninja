@@ -97,6 +97,12 @@ build CMakeFiles/AdventOfCode.dir/Year2022/Day6/DaySix.cpp.obj: CXX_COMPILER__Ad
   OBJECT_DIR = CMakeFiles\AdventOfCode.dir
   OBJECT_FILE_DIR = CMakeFiles\AdventOfCode.dir\Year2022\Day6
 
+build CMakeFiles/AdventOfCode.dir/Year2022/Day7/DaySeven.cpp.obj: CXX_COMPILER__AdventOfCode_unscanned_Debug C$:/Users/Lukas/CLionProjects/AdventOfCode/Year2022/Day7/DaySeven.cpp || cmake_object_order_depends_target_AdventOfCode
+  DEP_FILE = CMakeFiles\AdventOfCode.dir\Year2022\Day7\DaySeven.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\AdventOfCode.dir
+  OBJECT_FILE_DIR = CMakeFiles\AdventOfCode.dir\Year2022\Day7
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target AdventOfCode
@@ -105,7 +111,7 @@ build CMakeFiles/AdventOfCode.dir/Year2022/Day6/DaySix.cpp.obj: CXX_COMPILER__Ad
 #############################################
 # Link the executable AdventOfCode.exe
 
-build AdventOfCode.exe: CXX_EXECUTABLE_LINKER__AdventOfCode_Debug CMakeFiles/AdventOfCode.dir/main.cpp.obj CMakeFiles/AdventOfCode.dir/Year2022/Day1/DayOne.cpp.obj CMakeFiles/AdventOfCode.dir/utils.cpp.obj CMakeFiles/AdventOfCode.dir/Year2022/Day2/DayTwo.cpp.obj CMakeFiles/AdventOfCode.dir/Year2022/Day3/DayThree.cpp.obj CMakeFiles/AdventOfCode.dir/Year2022/Day4/DayFour.cpp.obj CMakeFiles/AdventOfCode.dir/Year2022/Day5/DayFive.cpp.obj CMakeFiles/AdventOfCode.dir/Year2022/Day6/DaySix.cpp.obj
+build AdventOfCode.exe: CXX_EXECUTABLE_LINKER__AdventOfCode_Debug CMakeFiles/AdventOfCode.dir/main.cpp.obj CMakeFiles/AdventOfCode.dir/Year2022/Day1/DayOne.cpp.obj CMakeFiles/AdventOfCode.dir/utils.cpp.obj CMakeFiles/AdventOfCode.dir/Year2022/Day2/DayTwo.cpp.obj CMakeFiles/AdventOfCode.dir/Year2022/Day3/DayThree.cpp.obj CMakeFiles/AdventOfCode.dir/Year2022/Day4/DayFour.cpp.obj CMakeFiles/AdventOfCode.dir/Year2022/Day5/DayFive.cpp.obj CMakeFiles/AdventOfCode.dir/Year2022/Day6/DaySix.cpp.obj CMakeFiles/AdventOfCode.dir/Year2022/Day7/DaySeven.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\AdventOfCode.dir
