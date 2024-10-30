@@ -41,32 +41,34 @@ int DaySeven::partOne() const {
      * {number} indicates a file, of file size {number}
      */
 
-    auto firstDir = Directory("/");
-    std::string currentDir = "/";
-    std::string prevDir;
+    Directory firstDir = Directory("/");
+    Directory* currentDir = &firstDir;
+    Directory* prevDir = &firstDir;
     std::vector<Directory> currentContents;
     for(std::string line : fileContents) {
         if(line.at(0) == '$') {
             // is command
             currentContents.clear();
-            switch(line.substr(2, 2)) {
-                case "cd":
-                    // enter target directory
-                    const std::string targetDir = line.substr(3, line.length() - 3);
-                    if(targetDir == "..") {
-                        std::string temp = currentDir;
-                        currentDir = prevDir;
-                        prevDir = currentDir;
+            if(line.substr(2, 2) == "cd") {
+                // enter target directory
+                const std::string targetDir = line.substr(3, line.length() - 3);
+                if(targetDir == "..") {
+                    if(currentDir->getName() == "/") {
+                        prevDir = &firstDir;
                     } else {
-                        prevDir = currentDir;
-                        currentDir = targetDir;
+                        Directory* temp = currentDir;
+                        currentDir = prevDir;
+                        prevDir = temp;
                     }
-                    // TODO: switch to correct Directory object as well.
-                break;
-
-                case "ls":
-                    // all lines until next $ are in the current dir
-                break;
+                } else {
+                    Directory* temp = currentDir;
+                    currentDir = currentDir->swapToDir(targetDir);
+                    prevDir = currentDir;
+                }
+            } else if(line.substr(2, 2) == "ls") {
+                // all lines until next $ are in the current dir
+                // this branch is just for readability purposes, maybe?
+                // might need to do stuff here in the future who knows
             }
         } else {
             // is not command

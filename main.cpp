@@ -5,6 +5,7 @@
 #include "Year2022/Day4/DayFour.h"
 #include "Year2022/Day5/DayFive.h"
 #include "Year2022/Day6/DaySix.h"
+#include "Year2022/Day7/DaySeven.h"
 
 int main() {
     std::cout << "Day 1:" << std::endl;
@@ -59,6 +60,15 @@ int main() {
     const DaySix daySix("input.txt");
     std::cout << daySix.bothParts(4) << std::endl;
     std::cout << daySix.bothParts(14) << std::endl;
+    std::cout << std::endl;
+
+    std::cout << "Day 7:" << std::endl;
+    const DaySeven daySevenSample("sampleInput.txt");
+    std::cout << daySevenSample.partOne() << std::endl;
+    // std::cout << daySevenSample.partTwo() << std::endl;
+    const DaySeven daySeven("input.txt");
+    // std::cout << daySeven.partOne() << std::endl;
+    // std::cout << daySeven.partTwo() << std::endl;
     std::cout << std::endl;
 
     return 0;

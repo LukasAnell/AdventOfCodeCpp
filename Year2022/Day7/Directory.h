@@ -11,17 +11,18 @@
 class Directory {
     std::string name;
     int size = 0;
-    std::vector<Directory> contents;
+    std::vector<Directory*> contents;
 
 public:
-    Directory(std::string name, int size);
-    explicit Directory(std::string name);
+    Directory(std::string n, int s);
+    explicit Directory(std::string n);
 
     std::string getName();
-    int getSize();
-    std::vector<Directory>* getContents();
+    int getSize() const;
+    std::vector<Directory*>* getContents();
 
-    void addToContents(Directory);
+    void addToContents(Directory* directory);
+    Directory* swapToDir(const std::string& directoryName);
 };
 
 
