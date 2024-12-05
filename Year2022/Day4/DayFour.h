@@ -2,21 +2,20 @@
 // Created by Lukas on 8/29/2024.
 //
 
-#ifndef DAYFOUR_H
-#define DAYFOUR_H
+#ifndef YEAR2022_DAYFOUR_H
+#define YEAR2022_DAYFOUR_H
 #include <string>
 #include <vector>
 
+namespace Year2022 {
+    class DayFour {
+    public:
+        std::vector<std::string> fileContents;
 
-class DayFour {
-public:
-    std::vector<std::string> fileContents;
+        explicit DayFour(const std::string& fileName);
+        [[nodiscard]] int partOne() const;
+        [[nodiscard]] int partTwo() const;
+    };
+}
 
-    explicit DayFour(const std::string& fileName);
-    [[nodiscard]] int partOne() const;
-    [[nodiscard]] int partTwo() const;
-};
-
-
-
-#endif //DAYFOUR_H
+#endif //YEAR2022_DAYFOUR_H

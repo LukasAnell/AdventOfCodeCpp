@@ -21,4 +21,4 @@ namespace Year2024 {
     };
 }
 
-#endif //DAYTWO_H
+#endif //YEAR2024_DAYTWO_H

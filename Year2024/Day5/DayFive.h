@@ -19,4 +19,4 @@ namespace Year2024 {
     };
 }
 
-#endif //DAYFIVE_H
+#endif //YEAR2024_DAYFIVE_H

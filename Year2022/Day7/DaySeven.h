@@ -2,21 +2,20 @@
 // Created by Lukas on 8/30/2024.
 //
 
-#ifndef DAYSEVEN_H
-#define DAYSEVEN_H
+#ifndef YEAR2022_DAYSEVEN_H
+#define YEAR2022_DAYSEVEN_H
 #include <string>
 #include <vector>
 
+namespace Year2022 {
+    class DaySeven {
+    public:
+        std::vector<std::string> fileContents;
 
-class DaySeven {
-public:
-    std::vector<std::string> fileContents;
+        explicit DaySeven(const std::string &fileName);
+        [[nodiscard]] int partOne() const;
+        // [[nodiscard]] int partTwo() const;
+    };
+}
 
-    explicit DaySeven(const std::string &fileName);
-    [[nodiscard]] int partOne() const;
-    // [[nodiscard]] int partTwo() const;
-};
-
-
-
-#endif //DAYSEVEN_H
+#endif //YEAR2022_DAYSEVEN_H

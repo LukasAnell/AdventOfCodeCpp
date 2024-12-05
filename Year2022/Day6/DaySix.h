@@ -2,20 +2,19 @@
 // Created by Lukas on 8/30/2024.
 //
 
-#ifndef DAYSIX_H
-#define DAYSIX_H
+#ifndef YEAR2022_DAYSIX_H
+#define YEAR2022_DAYSIX_H
 #include <string>
 #include <vector>
 
+namespace Year2022 {
+    class DaySix {
+    public:
+        std::vector<std::string> fileContents;
 
-class DaySix {
-public:
-    std::vector<std::string> fileContents;
+        explicit DaySix(const std::string &fileName);
+        [[nodiscard]] int bothParts(int distinctAmount) const;
+    };
+}
 
-    explicit DaySix(const std::string &fileName);
-    [[nodiscard]] int bothParts(int distinctAmount) const;
-};
-
-
-
-#endif //DAYSIX_H
+#endif //YEAR2022_DAYSIX_H

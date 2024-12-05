@@ -4,10 +4,8 @@
 
 #include "DayFive.h"
 
-#include <algorithm>
-#include <map>
-
 #include "../../utils.h"
+#include <algorithm>
 
 namespace Year2024 {
     DayFive::DayFive(const std::string& fileName) {

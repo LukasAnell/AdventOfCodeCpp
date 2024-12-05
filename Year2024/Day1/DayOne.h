@@ -19,4 +19,4 @@ namespace Year2024 {
     };
 }
 
-#endif //DAYONE_H
+#endif //YEAR2024_DAYONE_H

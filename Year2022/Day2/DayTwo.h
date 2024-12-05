@@ -2,21 +2,20 @@
 // Created by Lukas on 8/28/2024.
 //
 
-#ifndef DAYTWO_H
-#define DAYTWO_H
+#ifndef YEAR2022_DAYTWO_H
+#define YEAR2022_DAYTWO_H
 #include <string>
 #include <vector>
 
+namespace Year2022 {
+    class DayTwo {
+    public:
+        std::vector<std::string> fileContents;
 
-class DayTwo {
-public:
-    std::vector<std::string> fileContents;
+        explicit DayTwo(const std::string& fileName);
+        [[nodiscard]] int partOne() const;
+        [[nodiscard]] int partTwo() const;
+    };
+}
 
-    explicit DayTwo(const std::string& fileName);
-    [[nodiscard]] int partOne() const;
-    [[nodiscard]] int partTwo() const;
-};
-
-
-
-#endif //DAYTWO_H
+#endif //YEAR2022_DAYTWO_H
