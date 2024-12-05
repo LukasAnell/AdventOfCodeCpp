@@ -78,4 +78,25 @@ namespace Year2024 {
         return count;
     }
 
+    int DayFour::partTwo() const {
+        int count = 0;
+
+        const std::regex masRgx(R"(MAS)");
+        const std::regex samRgx(R"(SAM)");
+        std::smatch matches;
+        for (int r = 1; r < fileContents.size() - 1; r++) {
+            for (int c = 1; c < fileContents[0].size() - 1; c++) {
+                if (fileContents[r][c] == 'A') {
+                    std::string firstDiag = std::string(1, fileContents[r - 1][c - 1]) + fileContents[r][c] + fileContents[r + 1][c + 1];
+                    std::string secondDiag = std::string(1, fileContents[r + 1][c - 1]) + fileContents[r][c] + fileContents[r - 1][c + 1];
+                    if ((firstDiag == "MAS" || firstDiag == "SAM") && (secondDiag == "MAS" || secondDiag == "SAM")) {
+                        count++;
+                    }
+                }
+            }
+        }
+
+        return count;
+    }
+
 }
