@@ -10,7 +10,7 @@
 
 class utils {
     public:
-    static std::vector<std::string> readFile(const std::string& fileName, int dayNumber);
+    static std::vector<std::string> readFile(const std::string& fileName, int year, int dayNumber, bool isSample);
 };
 
 

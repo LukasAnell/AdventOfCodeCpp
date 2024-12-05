@@ -12,7 +12,7 @@ namespace Year2022 {
     public:
         std::vector<std::string> fileContents;
 
-        explicit DayOne(const std::string& fileName);
+        explicit DayOne(const std::string& fileName, bool isSample);
         [[nodiscard]] int bothParts(int topX) const;
     };
 }

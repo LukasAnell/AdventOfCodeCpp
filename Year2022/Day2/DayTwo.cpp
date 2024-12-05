@@ -4,12 +4,12 @@
 
 #include "DayTwo.h"
 
-#include "../../utils.h"
+#include "../../Utils/utils.h"
 #include <map>
 
 namespace Year2022 {
-    DayTwo::DayTwo(const std::string &fileName) {
-        fileContents = utils::readFile(fileName, 2);
+    DayTwo::DayTwo(const std::string &fileName, const bool isSample) {
+        fileContents = utils::readFile(fileName, 2022, 2, isSample);
     }
 
     int DayTwo::partOne() const {

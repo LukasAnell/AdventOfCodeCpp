@@ -12,7 +12,7 @@ namespace Year2022 {
     public:
         std::vector<std::string> fileContents;
 
-        explicit DayFive(const std::string& fileName);
+        explicit DayFive(const std::string& fileName, bool isSample);
         [[nodiscard]] std::string partOne() const;
         [[nodiscard]] std::string partTwo() const;
         static int findMaxColumnLength(const std::vector<std::vector<char>>& vec) ;

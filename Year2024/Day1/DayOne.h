@@ -12,7 +12,7 @@ namespace Year2024 {
     public:
         std::vector<std::string> fileContents;
 
-        explicit DayOne(const std::string& fileName);
+        explicit DayOne(const std::string& fileName, bool isSample);
         [[nodiscard]] int partOne() const;
         [[nodiscard]] static std::pair<int, int> constructNums(const std::string& input) ;
         [[nodiscard]] int partTwo() const;

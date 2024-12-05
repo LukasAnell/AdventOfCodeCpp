@@ -12,7 +12,7 @@ namespace Year2024 {
     public:
         std::vector<std::string> fileContents;
 
-        explicit DayFive(const std::string& fileName);
+        explicit DayFive(const std::string& fileName, bool isSample);
         [[nodiscard]] int partOne() const;
         [[nodiscard]] int partTwo() const;
         [[nodiscard]] static bool customComparator(int a, int b, const std::vector<std::pair<int, int>>& rules) ;

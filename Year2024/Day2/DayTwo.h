@@ -13,7 +13,7 @@ namespace Year2024 {
     public:
         std::vector<std::string> fileContents;
 
-        explicit DayTwo(const std::string& fileName);
+        explicit DayTwo(const std::string& fileName, bool isSample);
         [[nodiscard]] int partOne() const;
         [[nodiscard]] static bool incrOrDecr(const std::vector<int>& vector);
         [[nodiscard]] static bool withinRange(const std::vector<int>& vector);

@@ -8,8 +8,12 @@
 #include <fstream>
 #include <iostream>
 
-std::vector<std::string> utils::readFile(const std::string& fileName, const int dayNumber) {
-    const std::string fullFileName = "..\\Year2024\\Day" +  std::to_string(dayNumber) + "\\" + fileName;
+std::vector<std::string> utils::readFile(const std::string& fileName, const int year, const int dayNumber, const bool isSample) {
+    std::string fullFileName = "..\\Year" + std::to_string(year) + "\\";
+    if (isSample) {
+        fullFileName += "Sample";
+    }
+    fullFileName += "Inputs\\day" +  std::to_string(dayNumber) + fileName;
     std::ifstream file(fullFileName);
 
     std::vector<std::string> output;

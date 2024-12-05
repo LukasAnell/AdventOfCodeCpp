@@ -4,12 +4,12 @@
 
 #include "DayThree.h"
 
-#include "../../utils.h"
+#include "../../Utils/utils.h"
 #include <regex>
 
 namespace Year2024 {
-    DayThree::DayThree(const std::string& fileName) {
-        fileContents = utils::readFile(fileName, 3);
+    DayThree::DayThree(const std::string& fileName, const bool isSample) {
+        fileContents = utils::readFile(fileName, 2024, 3, isSample);
     }
 
     int DayThree::partOne() const {

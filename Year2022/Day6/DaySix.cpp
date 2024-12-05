@@ -3,11 +3,11 @@
 //
 
 #include "DaySix.h"
-#include "../../utils.h"
+#include "../../Utils/utils.h"
 
 namespace Year2022 {
-    DaySix::DaySix(const std::string &fileName) {
-        fileContents = utils::readFile(fileName, 6);
+    DaySix::DaySix(const std::string &fileName, const bool isSample) {
+        fileContents = utils::readFile(fileName, 2022, 6, isSample);
     }
 
     int DaySix::bothParts(const int distinctAmount) const {

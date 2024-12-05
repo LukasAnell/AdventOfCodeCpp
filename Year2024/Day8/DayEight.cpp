@@ -4,12 +4,12 @@
 
 #include "DayEight.h"
 
-#include "../../utils.h"
+#include "../../Utils/utils.h"
 #include <string>
 
 namespace Year2024 {
-    DayEight::DayEight(const std::string& fileName) {
-        fileContents = utils::readFile(fileName, 8);
+    DayEight::DayEight(const std::string& fileName, const bool isSample) {
+        fileContents = utils::readFile(fileName, 2024, 8, isSample);
     }
 
     int DayEight::partOne() const {
