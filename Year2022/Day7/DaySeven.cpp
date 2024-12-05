@@ -40,7 +40,7 @@ int DaySeven::partOne() const {
      * dir -> indicates a dir
      * {number} indicates a file, of file size {number}
      */
-
+/*
     Directory firstDir = Directory("/");
     Directory* currentDir = &firstDir;
     Directory* prevDir = &firstDir;
@@ -93,4 +93,5 @@ int DaySeven::partOne() const {
             }
         }
     }
+    */
 }
