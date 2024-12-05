@@ -14,7 +14,7 @@ namespace Year2024 {
 
         explicit DayOne(const std::string& fileName);
         [[nodiscard]] int partOne() const;
-        [[nodiscard]] std::pair<int, int> constructNums(const std::string& input) const;
+        [[nodiscard]] static std::pair<int, int> constructNums(const std::string& input) ;
         [[nodiscard]] int partTwo() const;
     };
 }

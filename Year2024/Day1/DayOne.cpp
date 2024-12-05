@@ -4,9 +4,9 @@
 
 #include "DayOne.h"
 
+#include "../../utils.h"
 #include <algorithm>
 
-#include "../../utils.h"
 namespace Year2024 {
     DayOne::DayOne(const std::string& fileName) {
         fileContents = utils::readFile(fileName, 1);
@@ -16,8 +16,7 @@ namespace Year2024 {
         std::vector<int> colOne;
         std::vector<int> colTwo;
 
-        for (int i = 0; i < fileContents.size(); i++) {
-            std::string row = fileContents.at(i);
+        for (const auto& row : fileContents) {
             auto [first, second] = constructNums(row);
             colOne.push_back(first);
             colTwo.push_back(second);
@@ -33,9 +32,9 @@ namespace Year2024 {
         return distance;
     }
 
-    std::pair<int, int> DayOne::constructNums(const std::string& input) const {
-        int numOne = stoi(input.substr(0, input.find(" ")));
-        int numTwo = stoi(input.substr(input.find(" ")));
+    std::pair<int, int> DayOne::constructNums(const std::string& input) {
+        int numOne = stoi(input.substr(0, input.find(' ')));
+        int numTwo = stoi(input.substr(input.find(' ')));
         return {numOne, numTwo};
     }
 
@@ -43,8 +42,7 @@ namespace Year2024 {
         std::vector<int> colOne;
         std::vector<int> colTwo;
 
-        for (int i = 0; i < fileContents.size(); i++) {
-            std::string row = fileContents.at(i);
+        for (const auto& row : fileContents) {
             auto [first, second] = constructNums(row);
             colOne.push_back(first);
             colTwo.push_back(second);
@@ -52,9 +50,9 @@ namespace Year2024 {
 
         int score = 0;
 
-        for (int firstRowNum : colOne) {
+        for (const int firstRowNum : colOne) {
             int count = 0;
-            for (int secondRowNum : colTwo) {
+            for (const int secondRowNum : colTwo) {
                 if (firstRowNum == secondRowNum) {
                     count++;
                 }

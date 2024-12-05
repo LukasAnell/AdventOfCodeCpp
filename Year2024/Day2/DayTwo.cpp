@@ -4,9 +4,10 @@
 
 #include "DayTwo.h"
 
-#include <sstream>
+#include <iostream>
 
 #include "../../utils.h"
+#include <sstream>
 
 namespace Year2024 {
     DayTwo::DayTwo(const std::string& fileName) {
@@ -24,8 +25,7 @@ namespace Year2024 {
             }
 
             const bool incrOrDecr = DayTwo::incrOrDecr(rowVector);
-            const bool withinRange = DayTwo::withinRange(rowVector);
-            if (incrOrDecr && withinRange) {
+            if (const bool withinRange = DayTwo::withinRange(rowVector); incrOrDecr && withinRange) {
                 count++;
             }
         }

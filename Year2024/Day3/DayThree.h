@@ -15,7 +15,7 @@ namespace Year2024 {
 
         explicit DayThree(const std::string& fileName);
         [[nodiscard]] int partOne() const;
-        // [[nodiscard]] int partTwo() const;
+        [[nodiscard]] int partTwo() const;
     };
 }
 

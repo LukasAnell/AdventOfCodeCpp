@@ -7,7 +7,6 @@
 #include <filesystem>
 #include <fstream>
 #include <iostream>
-#include <string.h>
 
 std::vector<std::string> utils::readFile(const std::string& fileName, const int dayNumber) {
     const std::string fullFileName = "..\\Year2024\\Day" +  std::to_string(dayNumber) + "\\" + fileName;
