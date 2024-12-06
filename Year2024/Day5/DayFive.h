@@ -15,7 +15,7 @@ namespace Year2024 {
         explicit DayFive(const std::string& fileName, bool isSample);
         [[nodiscard]] int partOne() const;
         [[nodiscard]] int partTwo() const;
-        [[nodiscard]] static bool customComparator(int a, int b, const std::vector<std::pair<int, int>>& rules) ;
+        [[nodiscard]] static bool customComparator(int a, int b, const std::vector<std::pair<int, int>>& rules);
     };
 }
 

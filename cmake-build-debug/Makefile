@@ -128,6 +128,30 @@ AdventOfCode/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/build
 .PHONY : AdventOfCode/fast
 
+Utils/utils.obj: Utils/utils.cpp.obj
+.PHONY : Utils/utils.obj
+
+# target to build an object file
+Utils/utils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Utils/utils.cpp.obj
+.PHONY : Utils/utils.cpp.obj
+
+Utils/utils.i: Utils/utils.cpp.i
+.PHONY : Utils/utils.i
+
+# target to preprocess a source file
+Utils/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Utils/utils.cpp.i
+.PHONY : Utils/utils.cpp.i
+
+Utils/utils.s: Utils/utils.cpp.s
+.PHONY : Utils/utils.s
+
+# target to generate assembly for a file
+Utils/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Utils/utils.cpp.s
+.PHONY : Utils/utils.cpp.s
+
 Year2022/Day1/DayOne.obj: Year2022/Day1/DayOne.cpp.obj
 .PHONY : Year2022/Day1/DayOne.obj
 
@@ -416,6 +440,54 @@ Year2024/Day4/DayFour.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day4/DayFour.cpp.s
 .PHONY : Year2024/Day4/DayFour.cpp.s
 
+Year2024/Day5/DayFive.obj: Year2024/Day5/DayFive.cpp.obj
+.PHONY : Year2024/Day5/DayFive.obj
+
+# target to build an object file
+Year2024/Day5/DayFive.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day5/DayFive.cpp.obj
+.PHONY : Year2024/Day5/DayFive.cpp.obj
+
+Year2024/Day5/DayFive.i: Year2024/Day5/DayFive.cpp.i
+.PHONY : Year2024/Day5/DayFive.i
+
+# target to preprocess a source file
+Year2024/Day5/DayFive.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day5/DayFive.cpp.i
+.PHONY : Year2024/Day5/DayFive.cpp.i
+
+Year2024/Day5/DayFive.s: Year2024/Day5/DayFive.cpp.s
+.PHONY : Year2024/Day5/DayFive.s
+
+# target to generate assembly for a file
+Year2024/Day5/DayFive.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day5/DayFive.cpp.s
+.PHONY : Year2024/Day5/DayFive.cpp.s
+
+Year2024/Day6/DaySix.obj: Year2024/Day6/DaySix.cpp.obj
+.PHONY : Year2024/Day6/DaySix.obj
+
+# target to build an object file
+Year2024/Day6/DaySix.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day6/DaySix.cpp.obj
+.PHONY : Year2024/Day6/DaySix.cpp.obj
+
+Year2024/Day6/DaySix.i: Year2024/Day6/DaySix.cpp.i
+.PHONY : Year2024/Day6/DaySix.i
+
+# target to preprocess a source file
+Year2024/Day6/DaySix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day6/DaySix.cpp.i
+.PHONY : Year2024/Day6/DaySix.cpp.i
+
+Year2024/Day6/DaySix.s: Year2024/Day6/DaySix.cpp.s
+.PHONY : Year2024/Day6/DaySix.s
+
+# target to generate assembly for a file
+Year2024/Day6/DaySix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day6/DaySix.cpp.s
+.PHONY : Year2024/Day6/DaySix.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -440,30 +512,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-utils.obj: utils.cpp.obj
-.PHONY : utils.obj
-
-# target to build an object file
-utils.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/utils.cpp.obj
-.PHONY : utils.cpp.obj
-
-utils.i: utils.cpp.i
-.PHONY : utils.i
-
-# target to preprocess a source file
-utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/utils.cpp.i
-.PHONY : utils.cpp.i
-
-utils.s: utils.cpp.s
-.PHONY : utils.s
-
-# target to generate assembly for a file
-utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/utils.cpp.s
-.PHONY : utils.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -473,6 +521,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... AdventOfCode
+	@echo ... Utils/utils.obj
+	@echo ... Utils/utils.i
+	@echo ... Utils/utils.s
 	@echo ... Year2022/Day1/DayOne.obj
 	@echo ... Year2022/Day1/DayOne.i
 	@echo ... Year2022/Day1/DayOne.s
@@ -509,12 +560,15 @@ help:
 	@echo ... Year2024/Day4/DayFour.obj
 	@echo ... Year2024/Day4/DayFour.i
 	@echo ... Year2024/Day4/DayFour.s
+	@echo ... Year2024/Day5/DayFive.obj
+	@echo ... Year2024/Day5/DayFive.i
+	@echo ... Year2024/Day5/DayFive.s
+	@echo ... Year2024/Day6/DaySix.obj
+	@echo ... Year2024/Day6/DaySix.i
+	@echo ... Year2024/Day6/DaySix.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... utils.obj
-	@echo ... utils.i
-	@echo ... utils.s
 .PHONY : help
 
 
