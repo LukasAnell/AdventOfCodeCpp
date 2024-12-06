@@ -1,15 +1,15 @@
 #include <iostream>
 
-#include "Year2024/Day6/DaySix.h"
+#include "Year2024/Day7/DaySeven.h"
 
 int main() {
-    std::cout << "Day 6:" << std::endl;
-    const Year2024::DaySix daySixSample("SampleInput.txt", true);
-    std::cout << daySixSample.partOne() << std::endl;
-    std::cout << daySixSample.partTwo() << std::endl;
-    const Year2024::DaySix daySix("Input.txt", false);
-    std::cout << daySix.partOne() << std::endl;
-    std::cout << daySix.partTwo() << std::endl;
+    std::cout << "Day 7:" << std::endl;
+    const Year2024::DaySeven daySevenSample("SampleInput.txt", true);
+    std::cout << daySevenSample.partOne() << std::endl;
+    //std::cout << daySevenSample.partTwo() << std::endl;
+    const Year2024::DaySeven daySeven("Input.txt", false);
+    std::cout << daySeven.partOne() << std::endl;
+    //std::cout << daySeven.partTwo() << std::endl;
     std::cout << std::endl;
 
     return 0;
