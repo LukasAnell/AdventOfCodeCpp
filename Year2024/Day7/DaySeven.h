@@ -13,8 +13,8 @@ namespace Year2024 {
         std::vector<std::string> fileContents;
 
         explicit DaySeven(const std::string& fileName, bool isSample);
-        [[nodiscard]] int partOne() const;
-        [[nodiscard]] int partTwo() const;
+        [[nodiscard]] long long partOne() const;
+        [[nodiscard]] long long partTwo() const;
     };
 }
 

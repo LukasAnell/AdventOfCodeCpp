@@ -31,7 +31,7 @@ int main() {
     std::cout << dayTwo.partOne() << std::endl;
     std::cout << dayTwo.partTwo() << std::endl;
     std::cout << std::endl;
-*/
+
 
     std::cout << "Day3:" << std::endl;
     const Year2024::DayThree dayThreeSample("SampleInput.txt", true);
@@ -42,7 +42,7 @@ int main() {
     std::cout << dayThree.partTwo() << std::endl;
     std::cout << std::endl;
 
-/*
+
     std::cout << "Day4:" << std::endl;
     const Year2024::DayFour dayFourSample("SampleInput.txt", true);
     std::cout << dayFourSample.partOne() << std::endl;
@@ -71,17 +71,17 @@ int main() {
     std::cout << daySix.partOne() << std::endl;
     std::cout << daySix.partTwo() << std::endl;
     std::cout << std::endl;
-
+*/
 
     std::cout << "Day7:" << std::endl;
     const Year2024::DaySeven daySevenSample("SampleInput.txt", true);
-    //std::cout << daySevenSample.partOne() << std::endl;
-    //std::cout << daySevenSample.partTwo() << std::endl;
+    std::cout << daySevenSample.partOne() << std::endl;
+    std::cout << daySevenSample.partTwo() << std::endl;
     const Year2024::DaySeven daySeven("Input.txt", false);
-    //std::cout << daySeven.partOne() << std::endl;
-    //std::cout << daySeven.partTwo() << std::endl;
+    std::cout << daySeven.partOne() << std::endl;
+    std::cout << daySeven.partTwo() << std::endl;
     std::cout << std::endl;
-*/
+
 /*
     std::cout << "Day8:" << std::endl;
     const Year2024::DayEight dayEightSample("SampleInput.txt", true);
