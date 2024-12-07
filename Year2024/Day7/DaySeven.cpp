@@ -12,7 +12,7 @@ namespace Year2024 {
         fileContents = utils::readFile(fileName, 2024, 7, isSample);
     }
 
-    bool part1EvaluateExpression(const std::vector<long long>& numbers, const std::vector<char>& operators, long long target) {
+    bool DaySeven::part1EvaluateExpression(const std::vector<long long>& numbers, const std::vector<char>& operators, const long long target) {
         long long result = numbers[0];
         for (size_t i = 0; i < operators.size(); ++i) {
             if (operators[i] == '+') {
@@ -24,7 +24,7 @@ namespace Year2024 {
         return result == target;
     }
 
-    void part1GenerateOperators(std::vector<char>& operators, size_t index, const std::vector<long long>& numbers, long long target, bool& found) {
+    void DaySeven::part1GenerateOperators(std::vector<char>& operators, const size_t index, const std::vector<long long>& numbers, const long long target, bool& found) {
         if (index == operators.size()) {
             if (part1EvaluateExpression(numbers, operators, target)) {
                 found = true;
@@ -68,7 +68,7 @@ namespace Year2024 {
         return totalCalibrationResult;
     }
 
-    bool part2EvaluateExpression(const std::vector<long long>& numbers, const std::vector<std::string>& operators, long long target) {
+    bool DaySeven::part2EvaluateExpression(const std::vector<long long>& numbers, const std::vector<std::string>& operators, const long long target) {
         long long result = numbers[0];
         for (size_t i = 0; i < operators.size(); ++i) {
             if (operators[i] == "+") {
@@ -82,7 +82,7 @@ namespace Year2024 {
         return result == target;
     }
 
-    void part2GenerateOperators(std::vector<std::string>& operators, size_t index, const std::vector<long long>& numbers, long long target, bool& found) {
+    void DaySeven::part2GenerateOperators(std::vector<std::string>& operators, const size_t index, const std::vector<long long>& numbers, const long long target, bool& found) {
         if (index == operators.size()) {
             if (part2EvaluateExpression(numbers, operators, target)) {
                 found = true;
