@@ -42,7 +42,7 @@ namespace Year2024 {
         for (std::string line : fileContents) {
             const long long testValue = stoll(line.substr(0, line.find(':')));
             std::vector<long long> equation;
-            for (int i = line.find(':') + 2; i < line.size(); i++) {
+            for (int i = static_cast<int>(line.find(':')) + 2; i < line.size(); i++) {
                 std::string numString;
                 for (int j = i; j < line.size(); j++) {
                     if (line[j] == ' ') {
@@ -51,7 +51,7 @@ namespace Year2024 {
                     numString += line[j];
                 }
                 if (!numString.empty()) {
-                    i += numString.size() - 1;
+                    i += static_cast<int>(numString.size()) - 1;
                     equation.emplace_back(stoll(numString));
                 }
 
@@ -102,7 +102,7 @@ namespace Year2024 {
         for (const std::string& line : fileContents) {
             const long long testValue = std::stoll(line.substr(0, line.find(':')));
             std::vector<long long> equation;
-            for (int i = line.find(':') + 2; i < line.size(); i++) {
+            for (int i = static_cast<int>(line.find(':')) + 2; i < line.size(); i++) {
                 std::string numString;
                 for (int j = i; j < line.size(); j++) {
                     if (line[j] == ' ') {
@@ -111,7 +111,7 @@ namespace Year2024 {
                     numString += line[j];
                 }
                 if (!numString.empty()) {
-                    i += numString.size() - 1;
+                    i += static_cast<int>(numString.size()) - 1;
                     equation.emplace_back(std::stoll(numString));
                 }
             }
