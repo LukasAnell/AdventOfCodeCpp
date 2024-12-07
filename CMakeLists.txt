@@ -35,4 +35,12 @@ add_executable(AdventOfCode main.cpp
         Year2024/Day5/DayFive.cpp
         Year2024/Day5/DayFive.h
         Year2024/Day6/DaySix.cpp
-        Year2024/Day6/DaySix.h)
+        Year2024/Day6/DaySix.h
+        Year2024/Day7/DaySeven.cpp
+        Year2024/Day7/DaySeven.h
+        Year2024/Day8/DayEight.cpp
+        Year2024/Day8/DayEight.h
+        Year2024/Day9/DayNine.cpp
+        Year2024/Day9/DayNine.h
+        Year2024/Day10/DayTen.cpp
+        Year2024/Day10/DayTen.h)

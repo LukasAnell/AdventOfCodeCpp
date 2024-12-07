@@ -28,7 +28,7 @@ namespace Year2024 {
 
     int DayThree::partTwo() const {
         int total = 0;
-        const std::regex mulExpr(R"(^mul\(([0-9]{1,3}),([0-9]{1,3})\))");
+        const std::regex mulExpr(R"(^mul\((\d{1,3}),(\d{1,3})\))");
         const std::regex doExpr(R"(^do\(\))");
         const std::regex dontExpr(R"(^don't\(\))");
         std::smatch matches;
@@ -36,17 +36,25 @@ namespace Year2024 {
         for (const std::string& row : fileContents) {
             for(int i = 0; i < row.size(); i++) {
                 std::string newRow = row.substr(i);
-                if(std::regex_search(newRow, matches, doExpr)) {
+                const bool doSearch = std::regex_search(newRow, matches, doExpr);
+                const bool dontSearch = std::regex_search(newRow, matches, dontExpr);
+                if (const bool mulSearch = std::regex_search(newRow, matches, mulExpr); !mulSearch && !(doSearch || dontSearch)) {
+                    continue;
+                }
+                if(doSearch) {
                     enabled = true;
+                    continue;
                 }
-                if(std::regex_search(newRow, matches, dontExpr)) {
+                if(dontSearch) {
                     enabled = false;
+                    continue;
                 }
-                if(enabled && std::regex_search(newRow, matches, mulExpr)) {
+                if(enabled) {
                     total += stoi(matches[1].str()) * stoi(matches[2].str());
                 }
             }
         }
+
         return total;
     }
 

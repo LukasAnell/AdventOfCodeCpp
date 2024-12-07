@@ -13,8 +13,9 @@ namespace Year2024 {
         std::vector<std::string> fileContents;
 
         explicit DayOne(const std::string& fileName, bool isSample);
+        [[nodiscard]] static std::pair<int, int> constructNums(const std::string& input);
+        [[nodiscard]] std::pair<std::vector<int>, std::vector<int>> constructCols() const;
         [[nodiscard]] int partOne() const;
-        [[nodiscard]] static std::pair<int, int> constructNums(const std::string& input) ;
         [[nodiscard]] int partTwo() const;
     };
 }

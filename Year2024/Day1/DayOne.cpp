@@ -12,47 +12,41 @@ namespace Year2024 {
         fileContents = utils::readFile(fileName, 2024, 1, isSample);
     }
 
-    int DayOne::partOne() const {
-        std::vector<int> colOne;
-        std::vector<int> colTwo;
-
-        for (const auto& row : fileContents) {
-            auto [first, second] = constructNums(row);
-            colOne.push_back(first);
-            colTwo.push_back(second);
-        }
-
-        std::ranges::sort(colOne);
-        std::ranges::sort(colTwo);
-
-        int distance = 0;
-        for (int i = 0; i < colOne.size(); i++) {
-            distance += abs(colOne.at(i) - colTwo.at(i));
-        }
-        return distance;
-    }
-
     std::pair<int, int> DayOne::constructNums(const std::string& input) {
         int numOne = stoi(input.substr(0, input.find(' ')));
         int numTwo = stoi(input.substr(input.find(' ')));
         return {numOne, numTwo};
     }
 
-    int DayOne::partTwo() const {
+    std::pair<std::vector<int>, std::vector<int>> DayOne::constructCols() const {
         std::vector<int> colOne;
         std::vector<int> colTwo;
-
         for (const auto& row : fileContents) {
             auto [first, second] = constructNums(row);
             colOne.push_back(first);
             colTwo.push_back(second);
         }
+        return {colOne, colTwo};
+    }
 
+    int DayOne::partOne() const {
+        auto [first, second] = constructCols();
+        std::ranges::sort(first);
+        std::ranges::sort(second);
+
+        int distance = 0;
+        for (int i = 0; i < first.size(); i++) {
+            distance += abs(first.at(i) - second.at(i));
+        }
+        return distance;
+    }
+
+    int DayOne::partTwo() const {
+        auto [first, second] = constructCols();
         int score = 0;
-
-        for (const int firstRowNum : colOne) {
+        for (const int firstRowNum : first) {
             int count = 0;
-            for (const int secondRowNum : colTwo) {
+            for (const int secondRowNum : second) {
                 if (firstRowNum == secondRowNum) {
                     count++;
                 }

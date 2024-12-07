@@ -13,24 +13,6 @@ namespace Year2024 {
         fileContents = utils::readFile(fileName, 2024, 2, isSample);
     }
 
-    int DayTwo::partOne() const {
-        int count = 0;
-        for (const std::string& row : fileContents) {
-            std::stringstream rowSs(row);
-            std::vector<int> rowVector;
-            std::string segment;
-            while (std::getline(rowSs, segment, ' ')) {
-                rowVector.push_back(stoi(segment));
-            }
-
-            const bool incrOrDecr = DayTwo::incrOrDecr(rowVector);
-            if (const bool withinRange = DayTwo::withinRange(rowVector); incrOrDecr && withinRange) {
-                count++;
-            }
-        }
-        return count;
-    }
-
     bool DayTwo::incrOrDecr(const std::vector<int>& vector) {
         bool increasing = true;
         for (int i = 1; i < vector.size(); i++) {
@@ -58,6 +40,24 @@ namespace Year2024 {
             }
         }
         return true;
+    }
+
+    int DayTwo::partOne() const {
+        int count = 0;
+        for (const std::string& row : fileContents) {
+            std::stringstream rowSs(row);
+            std::vector<int> rowVector;
+            std::string segment;
+            while (std::getline(rowSs, segment, ' ')) {
+                rowVector.push_back(stoi(segment));
+            }
+
+            const bool incrOrDecr = DayTwo::incrOrDecr(rowVector);
+            if (const bool withinRange = DayTwo::withinRange(rowVector); incrOrDecr && withinRange) {
+                count++;
+            }
+        }
+        return count;
     }
 
     int DayTwo::partTwo() const {
