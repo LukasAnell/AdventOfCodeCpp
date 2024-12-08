@@ -14,9 +14,9 @@ namespace Year2024 {
 
         explicit DaySix(const std::string& fileName, bool isSample);
         [[nodiscard]] int partOne() const;
-        [[nodiscard]] int partTwo() const;
         static bool containsPosAndDir(const std::vector<std::pair<std::pair<int, int>, int>>& vector, const std::pair<std::pair<int, int>, int>& pair);
         static bool testLoop(const std::pair<int, int>& startPos, const std::vector<std::string>& map);
+        [[nodiscard]] int partTwo() const;
     };
 }
 
