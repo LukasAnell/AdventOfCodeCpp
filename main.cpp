@@ -13,16 +13,19 @@
 #include "Year2024/Day10/DayTen.h"
 
 int main() {
-/*
+    std::chrono::steady_clock::time_point start;
+    std::chrono::steady_clock::time_point end;
+
+    /*
     std::cout << "Day1:" << std::endl;
     const Year2024::DayOne dayOneSample("SampleInput.txt", true);
     // std::cout << dayOneSample.partOne() << std::endl;
     // std::cout << dayOneSample.partTwo() << std::endl;
     const Year2024::DayOne dayOne("Input.txt", false);
 
-    auto start = std::chrono::steady_clock::now();
+    start = std::chrono::steady_clock::now();
     std::cout << dayOne.partOne() << " | ";
-    auto end = std::chrono::steady_clock::now();
+    end = std::chrono::steady_clock::now();
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
     start = std::chrono::steady_clock::now();
@@ -145,17 +148,17 @@ int main() {
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
     std::cout << std::endl;
-*/
+
 
     std::cout << "Day8:" << std::endl;
     const Year2024::DayEight dayEightSample("SampleInput.txt", true);
-    std::cout << dayEightSample.partOne() << std::endl;
-    std::cout << dayEightSample.partTwo() << std::endl;
+    //std::cout << dayEightSample.partOne() << std::endl;
+    //std::cout << dayEightSample.partTwo() << std::endl;
     const Year2024::DayEight dayEight("Input.txt", false);
 
-    auto start = std::chrono::steady_clock::now();
+    start = std::chrono::steady_clock::now();
     std::cout << dayEight.partOne() << " | ";
-    auto end = std::chrono::steady_clock::now();
+    end = std::chrono::steady_clock::now();
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
     start = std::chrono::steady_clock::now();
@@ -164,16 +167,16 @@ int main() {
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
     std::cout << std::endl;
+*/
 
-/*
     std::cout << "Day9:" << std::endl;
     const Year2024::DayNine dayNineSample("SampleInput.txt", true);
-    //std::cout << dayNineSample.partOne() << std::endl;
+    std::cout << dayNineSample.partOne() << std::endl;
     //std::cout << dayNineSample.partTwo() << std::endl;
     const Year2024::DayNine dayNine("Input.txt", false);
 
     start = std::chrono::steady_clock::now();
-    //std::cout << dayNine.partOne() << " | ";
+    std::cout << dayNine.partOne() << " | ";
     end = std::chrono::steady_clock::now();
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
@@ -184,7 +187,7 @@ int main() {
 
     std::cout << std::endl;
 
-
+/*
     std::cout << "Day10:" << std::endl;
     const Year2024::DayTen dayTenSample("SampleInput.txt", true);
     //std::cout << dayTenSample.partOne() << std::endl;

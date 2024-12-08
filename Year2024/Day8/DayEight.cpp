@@ -4,11 +4,10 @@
 
 #include "DayEight.h"
 
+#include "../../Utils/utils.h"
 #include <map>
 #include <ranges>
 #include <set>
-
-#include "../../Utils/utils.h"
 #include <string>
 
 namespace Year2024 {
