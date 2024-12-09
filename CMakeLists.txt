@@ -43,4 +43,35 @@ add_executable(AdventOfCode main.cpp
         Year2024/Day9/DayNine.cpp
         Year2024/Day9/DayNine.h
         Year2024/Day10/DayTen.cpp
-        Year2024/Day10/DayTen.h)
+        Year2024/Day10/DayTen.h
+        Year2024/Day11/DayEleven.cpp
+        Year2024/Day11/DayEleven.h
+        Year2024/Day12/DayTwelve.cpp
+        Year2024/Day12/DayTwelve.h
+        Year2024/Day13/DayThirteen.cpp
+        Year2024/Day13/DayThirteen.h
+        Year2024/Day14/DayFourteen.cpp
+        Year2024/Day14/DayFourteen.h
+        Year2024/Day15/DayFifteen.cpp
+        Year2024/Day15/DayFifteen.h
+        Year2024/Day16/DaySixteen.cpp
+        Year2024/Day16/DaySixteen.h
+        Year2024/Day17/DaySeventeen.cpp
+        Year2024/Day17/DaySeventeen.h
+        Year2024/Day18/DayEighteen.cpp
+        Year2024/Day18/DayEighteen.h
+        Year2024/Day19/DayNineteen.cpp
+        Year2024/Day19/DayNineteen.h
+        Year2024/Day20/DayTwenty.cpp
+        Year2024/Day20/DayTwenty.h
+        Year2024/Day21/DayTwentyOne.cpp
+        Year2024/Day21/DayTwentyOne.h
+        Year2024/Day22/DayTwentyTwo.cpp
+        Year2024/Day22/DayTwentyTwo.h
+        Year2024/Day23/DayTwentyThree.cpp
+        Year2024/Day23/DayTwentyThree.h
+        Year2024/Day24/DayTwentyFour.cpp
+        Year2024/Day24/DayTwentyFour.h
+        Year2024/Day25/DayTwentyFive.cpp
+        Year2024/Day25/DayTwentyFive.h
+)
