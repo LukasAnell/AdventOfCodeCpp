@@ -20,30 +20,37 @@ namespace Year2024 {
         }
     };
 
-    bool DayTen::isValidMoveP1(const int row, const int col, const std::vector<std::vector<int>>& map, const int prevHeight, const std::vector<std::vector<bool>>& visited) {
-        return row >= 0 && row < map.size() && col >= 0 && col < map[0].size() && map[row][col] == prevHeight + 1 && !visited[row][col];
+    bool DayTen::isValidMove(const int row, const int col, const std::vector<std::vector<int>>& map, const int prevHeight, const std::vector<std::vector<bool>>& visited, const bool partOne) {
+        if (partOne) {
+            return row >= 0 && row < map.size() && col >= 0 && col < map[0].size() && map[row][col] == prevHeight + 1 && !visited[row][col];
+        }
+        return row >= 0 && row < map.size() && col >= 0 && col < map[0].size() && map[row][col] == prevHeight + 1;
     }
 
-    void DayTen::exploreTrailP1(int row, int col, const std::vector<std::vector<int>>& map, std::vector<std::vector<bool>>& visited, std::unordered_set<std::pair<int, int>, pairHash>& uniqueNines) {
+    void DayTen::exploreTrail(int row, int col, const std::vector<std::vector<int>>& map, std::vector<std::vector<bool>>& visited, std::unordered_set<std::pair<int, int>, pairHash>& uniqueNines, int& score, const bool partOne) {
         if (map[row][col] == 9) {
-            uniqueNines.emplace(row, col);
+            if (partOne) {
+                uniqueNines.emplace(row, col);
+            } else {
+                score += 1;
+            }
             return;
         }
 
         visited[row][col] = true;
         const int currentHeight = map[row][col];
 
-        if (isValidMoveP1(row - 1, col, map, currentHeight, visited)) {
-            exploreTrailP1(row - 1, col, map, visited, uniqueNines);
+        if (isValidMove(row - 1, col, map, currentHeight, visited, partOne)) {
+            exploreTrail(row - 1, col, map, visited, uniqueNines, score, partOne);
         }
-        if (isValidMoveP1(row + 1, col, map, currentHeight, visited)) {
-            exploreTrailP1(row + 1, col, map, visited, uniqueNines);
+        if (isValidMove(row + 1, col, map, currentHeight, visited, partOne)) {
+            exploreTrail(row + 1, col, map, visited, uniqueNines, score, partOne);
         }
-        if (isValidMoveP1(row, col - 1, map, currentHeight, visited)) {
-            exploreTrailP1(row, col - 1, map, visited, uniqueNines);
+        if (isValidMove(row, col - 1, map, currentHeight, visited, partOne)) {
+            exploreTrail(row, col - 1, map, visited, uniqueNines, score, partOne);
         }
-        if (isValidMoveP1(row, col + 1, map, currentHeight, visited)) {
-            exploreTrailP1(row, col + 1, map, visited, uniqueNines);
+        if (isValidMove(row, col + 1, map, currentHeight, visited, partOne)) {
+            exploreTrail(row, col + 1, map, visited, uniqueNines, score, partOne);
         }
 
         visited[row][col] = false;
@@ -68,39 +75,12 @@ namespace Year2024 {
         for (const auto& [row, col] : trailheadLocs) {
             std::vector visited(topographicMap.size(), std::vector(topographicMap[0].size(), false));
             std::unordered_set<std::pair<int, int>, pairHash> uniqueNines;
-            exploreTrailP1(row, col, topographicMap, visited, uniqueNines);
+            int score = 0;
+            exploreTrail(row, col, topographicMap, visited, uniqueNines, score, true);
             totalScore += static_cast<int>(uniqueNines.size());
         }
 
         return totalScore;
-    }
-
-    bool DayTen::isValidMoveP2(const int row, const int col, const std::vector<std::vector<int>>& map, const int prevHeight) {
-        return row >= 0 && row < map.size() && col >= 0 && col < map[0].size() && map[row][col] == prevHeight + 1;
-    }
-
-    int DayTen::exploreTrailP2(const int row, const int col, const std::vector<std::vector<int>>& map) {
-        if (map[row][col] == 9) {
-            return 1;
-        }
-
-        int score = 0;
-        const int currentHeight = map[row][col];
-
-        if (isValidMoveP2(row - 1, col, map, currentHeight)) {
-            score += exploreTrailP2(row - 1, col, map);
-        }
-        if (isValidMoveP2(row + 1, col, map, currentHeight)) {
-            score += exploreTrailP2(row + 1, col, map);
-        }
-        if (isValidMoveP2(row, col - 1, map, currentHeight)) {
-            score += exploreTrailP2(row, col - 1, map);
-        }
-        if (isValidMoveP2(row, col + 1, map, currentHeight)) {
-            score += exploreTrailP2(row, col + 1, map);
-        }
-
-        return score;
     }
 
     int DayTen::partTwo() const {
@@ -120,7 +100,11 @@ namespace Year2024 {
 
         int totalScore = 0;
         for (const auto& [row, col] : trailheadLocs) {
-            totalScore += exploreTrailP2(row, col, topographicMap);
+            std::vector visited(topographicMap.size(), std::vector(topographicMap[0].size(), false));
+            std::unordered_set<std::pair<int, int>, pairHash> uniqueNines;
+            int score = 0;
+            exploreTrail(row, col, topographicMap, visited, uniqueNines, score, false);
+            totalScore += score;
         }
 
         return totalScore;
