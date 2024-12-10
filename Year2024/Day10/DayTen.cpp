@@ -13,18 +13,18 @@ namespace Year2024 {
         fileContents = utils::readFile(fileName, 2024, 10, isSample);
     }
 
-    struct pair_hash {
+    struct DayTen::pairHash {
         template <class T1, class T2>
         std::size_t operator() (const std::pair<T1, T2>& pair) const {
             return std::hash<T1>()(pair.first) ^ std::hash<T2>()(pair.second);
         }
     };
 
-    bool isValidMoveP1(const int row, const int col, const std::vector<std::vector<int>>& map, const int prevHeight, const std::vector<std::vector<bool>>& visited) {
+    bool DayTen::isValidMoveP1(const int row, const int col, const std::vector<std::vector<int>>& map, const int prevHeight, const std::vector<std::vector<bool>>& visited) {
         return row >= 0 && row < map.size() && col >= 0 && col < map[0].size() && map[row][col] == prevHeight + 1 && !visited[row][col];
     }
 
-    void exploreTrailP1(int row, int col, const std::vector<std::vector<int>>& map, std::vector<std::vector<bool>>& visited, std::unordered_set<std::pair<int, int>, pair_hash>& uniqueNines) {
+    void DayTen::exploreTrailP1(int row, int col, const std::vector<std::vector<int>>& map, std::vector<std::vector<bool>>& visited, std::unordered_set<std::pair<int, int>, pairHash>& uniqueNines) {
         if (map[row][col] == 9) {
             uniqueNines.emplace(row, col);
             return;
@@ -67,7 +67,7 @@ namespace Year2024 {
         int totalScore = 0;
         for (const auto& [row, col] : trailheadLocs) {
             std::vector visited(topographicMap.size(), std::vector(topographicMap[0].size(), false));
-            std::unordered_set<std::pair<int, int>, pair_hash> uniqueNines;
+            std::unordered_set<std::pair<int, int>, pairHash> uniqueNines;
             exploreTrailP1(row, col, topographicMap, visited, uniqueNines);
             totalScore += static_cast<int>(uniqueNines.size());
         }
@@ -75,11 +75,11 @@ namespace Year2024 {
         return totalScore;
     }
 
-    bool isValidMoveP2(const int row, const int col, const std::vector<std::vector<int>>& map, const int prevHeight) {
+    bool DayTen::isValidMoveP2(const int row, const int col, const std::vector<std::vector<int>>& map, const int prevHeight) {
         return row >= 0 && row < map.size() && col >= 0 && col < map[0].size() && map[row][col] == prevHeight + 1;
     }
 
-    int exploreTrailP2(const int row, const int col, const std::vector<std::vector<int>>& map) {
+    int DayTen::exploreTrailP2(const int row, const int col, const std::vector<std::vector<int>>& map) {
         if (map[row][col] == 9) {
             return 1;
         }
