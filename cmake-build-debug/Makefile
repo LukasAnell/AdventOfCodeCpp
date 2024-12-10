@@ -344,6 +344,54 @@ Year2022/Day7/Directory.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2022/Day7/Directory.cpp.s
 .PHONY : Year2022/Day7/Directory.cpp.s
 
+Year2023/Day/Day.obj: Year2023/Day/Day.cpp.obj
+.PHONY : Year2023/Day/Day.obj
+
+# target to build an object file
+Year2023/Day/Day.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2023/Day/Day.cpp.obj
+.PHONY : Year2023/Day/Day.cpp.obj
+
+Year2023/Day/Day.i: Year2023/Day/Day.cpp.i
+.PHONY : Year2023/Day/Day.i
+
+# target to preprocess a source file
+Year2023/Day/Day.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2023/Day/Day.cpp.i
+.PHONY : Year2023/Day/Day.cpp.i
+
+Year2023/Day/Day.s: Year2023/Day/Day.cpp.s
+.PHONY : Year2023/Day/Day.s
+
+# target to generate assembly for a file
+Year2023/Day/Day.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2023/Day/Day.cpp.s
+.PHONY : Year2023/Day/Day.cpp.s
+
+Year2023/Day1/Day1.obj: Year2023/Day1/Day1.cpp.obj
+.PHONY : Year2023/Day1/Day1.obj
+
+# target to build an object file
+Year2023/Day1/Day1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2023/Day1/Day1.cpp.obj
+.PHONY : Year2023/Day1/Day1.cpp.obj
+
+Year2023/Day1/Day1.i: Year2023/Day1/Day1.cpp.i
+.PHONY : Year2023/Day1/Day1.i
+
+# target to preprocess a source file
+Year2023/Day1/Day1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2023/Day1/Day1.cpp.i
+.PHONY : Year2023/Day1/Day1.cpp.i
+
+Year2023/Day1/Day1.s: Year2023/Day1/Day1.cpp.s
+.PHONY : Year2023/Day1/Day1.s
+
+# target to generate assembly for a file
+Year2023/Day1/Day1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2023/Day1/Day1.cpp.s
+.PHONY : Year2023/Day1/Day1.cpp.s
+
 Year2024/Day1/DayOne.obj: Year2024/Day1/DayOne.cpp.obj
 .PHONY : Year2024/Day1/DayOne.obj
 
@@ -392,6 +440,222 @@ Year2024/Day10/DayTen.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day10/DayTen.cpp.s
 .PHONY : Year2024/Day10/DayTen.cpp.s
 
+Year2024/Day11/DayEleven.obj: Year2024/Day11/DayEleven.cpp.obj
+.PHONY : Year2024/Day11/DayEleven.obj
+
+# target to build an object file
+Year2024/Day11/DayEleven.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day11/DayEleven.cpp.obj
+.PHONY : Year2024/Day11/DayEleven.cpp.obj
+
+Year2024/Day11/DayEleven.i: Year2024/Day11/DayEleven.cpp.i
+.PHONY : Year2024/Day11/DayEleven.i
+
+# target to preprocess a source file
+Year2024/Day11/DayEleven.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day11/DayEleven.cpp.i
+.PHONY : Year2024/Day11/DayEleven.cpp.i
+
+Year2024/Day11/DayEleven.s: Year2024/Day11/DayEleven.cpp.s
+.PHONY : Year2024/Day11/DayEleven.s
+
+# target to generate assembly for a file
+Year2024/Day11/DayEleven.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day11/DayEleven.cpp.s
+.PHONY : Year2024/Day11/DayEleven.cpp.s
+
+Year2024/Day12/DayTwelve.obj: Year2024/Day12/DayTwelve.cpp.obj
+.PHONY : Year2024/Day12/DayTwelve.obj
+
+# target to build an object file
+Year2024/Day12/DayTwelve.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day12/DayTwelve.cpp.obj
+.PHONY : Year2024/Day12/DayTwelve.cpp.obj
+
+Year2024/Day12/DayTwelve.i: Year2024/Day12/DayTwelve.cpp.i
+.PHONY : Year2024/Day12/DayTwelve.i
+
+# target to preprocess a source file
+Year2024/Day12/DayTwelve.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day12/DayTwelve.cpp.i
+.PHONY : Year2024/Day12/DayTwelve.cpp.i
+
+Year2024/Day12/DayTwelve.s: Year2024/Day12/DayTwelve.cpp.s
+.PHONY : Year2024/Day12/DayTwelve.s
+
+# target to generate assembly for a file
+Year2024/Day12/DayTwelve.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day12/DayTwelve.cpp.s
+.PHONY : Year2024/Day12/DayTwelve.cpp.s
+
+Year2024/Day13/DayThirteen.obj: Year2024/Day13/DayThirteen.cpp.obj
+.PHONY : Year2024/Day13/DayThirteen.obj
+
+# target to build an object file
+Year2024/Day13/DayThirteen.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day13/DayThirteen.cpp.obj
+.PHONY : Year2024/Day13/DayThirteen.cpp.obj
+
+Year2024/Day13/DayThirteen.i: Year2024/Day13/DayThirteen.cpp.i
+.PHONY : Year2024/Day13/DayThirteen.i
+
+# target to preprocess a source file
+Year2024/Day13/DayThirteen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day13/DayThirteen.cpp.i
+.PHONY : Year2024/Day13/DayThirteen.cpp.i
+
+Year2024/Day13/DayThirteen.s: Year2024/Day13/DayThirteen.cpp.s
+.PHONY : Year2024/Day13/DayThirteen.s
+
+# target to generate assembly for a file
+Year2024/Day13/DayThirteen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day13/DayThirteen.cpp.s
+.PHONY : Year2024/Day13/DayThirteen.cpp.s
+
+Year2024/Day14/DayFourteen.obj: Year2024/Day14/DayFourteen.cpp.obj
+.PHONY : Year2024/Day14/DayFourteen.obj
+
+# target to build an object file
+Year2024/Day14/DayFourteen.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day14/DayFourteen.cpp.obj
+.PHONY : Year2024/Day14/DayFourteen.cpp.obj
+
+Year2024/Day14/DayFourteen.i: Year2024/Day14/DayFourteen.cpp.i
+.PHONY : Year2024/Day14/DayFourteen.i
+
+# target to preprocess a source file
+Year2024/Day14/DayFourteen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day14/DayFourteen.cpp.i
+.PHONY : Year2024/Day14/DayFourteen.cpp.i
+
+Year2024/Day14/DayFourteen.s: Year2024/Day14/DayFourteen.cpp.s
+.PHONY : Year2024/Day14/DayFourteen.s
+
+# target to generate assembly for a file
+Year2024/Day14/DayFourteen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day14/DayFourteen.cpp.s
+.PHONY : Year2024/Day14/DayFourteen.cpp.s
+
+Year2024/Day15/DayFifteen.obj: Year2024/Day15/DayFifteen.cpp.obj
+.PHONY : Year2024/Day15/DayFifteen.obj
+
+# target to build an object file
+Year2024/Day15/DayFifteen.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day15/DayFifteen.cpp.obj
+.PHONY : Year2024/Day15/DayFifteen.cpp.obj
+
+Year2024/Day15/DayFifteen.i: Year2024/Day15/DayFifteen.cpp.i
+.PHONY : Year2024/Day15/DayFifteen.i
+
+# target to preprocess a source file
+Year2024/Day15/DayFifteen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day15/DayFifteen.cpp.i
+.PHONY : Year2024/Day15/DayFifteen.cpp.i
+
+Year2024/Day15/DayFifteen.s: Year2024/Day15/DayFifteen.cpp.s
+.PHONY : Year2024/Day15/DayFifteen.s
+
+# target to generate assembly for a file
+Year2024/Day15/DayFifteen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day15/DayFifteen.cpp.s
+.PHONY : Year2024/Day15/DayFifteen.cpp.s
+
+Year2024/Day16/DaySixteen.obj: Year2024/Day16/DaySixteen.cpp.obj
+.PHONY : Year2024/Day16/DaySixteen.obj
+
+# target to build an object file
+Year2024/Day16/DaySixteen.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day16/DaySixteen.cpp.obj
+.PHONY : Year2024/Day16/DaySixteen.cpp.obj
+
+Year2024/Day16/DaySixteen.i: Year2024/Day16/DaySixteen.cpp.i
+.PHONY : Year2024/Day16/DaySixteen.i
+
+# target to preprocess a source file
+Year2024/Day16/DaySixteen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day16/DaySixteen.cpp.i
+.PHONY : Year2024/Day16/DaySixteen.cpp.i
+
+Year2024/Day16/DaySixteen.s: Year2024/Day16/DaySixteen.cpp.s
+.PHONY : Year2024/Day16/DaySixteen.s
+
+# target to generate assembly for a file
+Year2024/Day16/DaySixteen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day16/DaySixteen.cpp.s
+.PHONY : Year2024/Day16/DaySixteen.cpp.s
+
+Year2024/Day17/DaySeventeen.obj: Year2024/Day17/DaySeventeen.cpp.obj
+.PHONY : Year2024/Day17/DaySeventeen.obj
+
+# target to build an object file
+Year2024/Day17/DaySeventeen.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day17/DaySeventeen.cpp.obj
+.PHONY : Year2024/Day17/DaySeventeen.cpp.obj
+
+Year2024/Day17/DaySeventeen.i: Year2024/Day17/DaySeventeen.cpp.i
+.PHONY : Year2024/Day17/DaySeventeen.i
+
+# target to preprocess a source file
+Year2024/Day17/DaySeventeen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day17/DaySeventeen.cpp.i
+.PHONY : Year2024/Day17/DaySeventeen.cpp.i
+
+Year2024/Day17/DaySeventeen.s: Year2024/Day17/DaySeventeen.cpp.s
+.PHONY : Year2024/Day17/DaySeventeen.s
+
+# target to generate assembly for a file
+Year2024/Day17/DaySeventeen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day17/DaySeventeen.cpp.s
+.PHONY : Year2024/Day17/DaySeventeen.cpp.s
+
+Year2024/Day18/DayEighteen.obj: Year2024/Day18/DayEighteen.cpp.obj
+.PHONY : Year2024/Day18/DayEighteen.obj
+
+# target to build an object file
+Year2024/Day18/DayEighteen.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day18/DayEighteen.cpp.obj
+.PHONY : Year2024/Day18/DayEighteen.cpp.obj
+
+Year2024/Day18/DayEighteen.i: Year2024/Day18/DayEighteen.cpp.i
+.PHONY : Year2024/Day18/DayEighteen.i
+
+# target to preprocess a source file
+Year2024/Day18/DayEighteen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day18/DayEighteen.cpp.i
+.PHONY : Year2024/Day18/DayEighteen.cpp.i
+
+Year2024/Day18/DayEighteen.s: Year2024/Day18/DayEighteen.cpp.s
+.PHONY : Year2024/Day18/DayEighteen.s
+
+# target to generate assembly for a file
+Year2024/Day18/DayEighteen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day18/DayEighteen.cpp.s
+.PHONY : Year2024/Day18/DayEighteen.cpp.s
+
+Year2024/Day19/DayNineteen.obj: Year2024/Day19/DayNineteen.cpp.obj
+.PHONY : Year2024/Day19/DayNineteen.obj
+
+# target to build an object file
+Year2024/Day19/DayNineteen.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day19/DayNineteen.cpp.obj
+.PHONY : Year2024/Day19/DayNineteen.cpp.obj
+
+Year2024/Day19/DayNineteen.i: Year2024/Day19/DayNineteen.cpp.i
+.PHONY : Year2024/Day19/DayNineteen.i
+
+# target to preprocess a source file
+Year2024/Day19/DayNineteen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day19/DayNineteen.cpp.i
+.PHONY : Year2024/Day19/DayNineteen.cpp.i
+
+Year2024/Day19/DayNineteen.s: Year2024/Day19/DayNineteen.cpp.s
+.PHONY : Year2024/Day19/DayNineteen.s
+
+# target to generate assembly for a file
+Year2024/Day19/DayNineteen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day19/DayNineteen.cpp.s
+.PHONY : Year2024/Day19/DayNineteen.cpp.s
+
 Year2024/Day2/DayTwo.obj: Year2024/Day2/DayTwo.cpp.obj
 .PHONY : Year2024/Day2/DayTwo.obj
 
@@ -415,6 +679,150 @@ Year2024/Day2/DayTwo.s: Year2024/Day2/DayTwo.cpp.s
 Year2024/Day2/DayTwo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day2/DayTwo.cpp.s
 .PHONY : Year2024/Day2/DayTwo.cpp.s
+
+Year2024/Day20/DayTwenty.obj: Year2024/Day20/DayTwenty.cpp.obj
+.PHONY : Year2024/Day20/DayTwenty.obj
+
+# target to build an object file
+Year2024/Day20/DayTwenty.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day20/DayTwenty.cpp.obj
+.PHONY : Year2024/Day20/DayTwenty.cpp.obj
+
+Year2024/Day20/DayTwenty.i: Year2024/Day20/DayTwenty.cpp.i
+.PHONY : Year2024/Day20/DayTwenty.i
+
+# target to preprocess a source file
+Year2024/Day20/DayTwenty.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day20/DayTwenty.cpp.i
+.PHONY : Year2024/Day20/DayTwenty.cpp.i
+
+Year2024/Day20/DayTwenty.s: Year2024/Day20/DayTwenty.cpp.s
+.PHONY : Year2024/Day20/DayTwenty.s
+
+# target to generate assembly for a file
+Year2024/Day20/DayTwenty.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day20/DayTwenty.cpp.s
+.PHONY : Year2024/Day20/DayTwenty.cpp.s
+
+Year2024/Day21/DayTwentyOne.obj: Year2024/Day21/DayTwentyOne.cpp.obj
+.PHONY : Year2024/Day21/DayTwentyOne.obj
+
+# target to build an object file
+Year2024/Day21/DayTwentyOne.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day21/DayTwentyOne.cpp.obj
+.PHONY : Year2024/Day21/DayTwentyOne.cpp.obj
+
+Year2024/Day21/DayTwentyOne.i: Year2024/Day21/DayTwentyOne.cpp.i
+.PHONY : Year2024/Day21/DayTwentyOne.i
+
+# target to preprocess a source file
+Year2024/Day21/DayTwentyOne.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day21/DayTwentyOne.cpp.i
+.PHONY : Year2024/Day21/DayTwentyOne.cpp.i
+
+Year2024/Day21/DayTwentyOne.s: Year2024/Day21/DayTwentyOne.cpp.s
+.PHONY : Year2024/Day21/DayTwentyOne.s
+
+# target to generate assembly for a file
+Year2024/Day21/DayTwentyOne.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day21/DayTwentyOne.cpp.s
+.PHONY : Year2024/Day21/DayTwentyOne.cpp.s
+
+Year2024/Day22/DayTwentyTwo.obj: Year2024/Day22/DayTwentyTwo.cpp.obj
+.PHONY : Year2024/Day22/DayTwentyTwo.obj
+
+# target to build an object file
+Year2024/Day22/DayTwentyTwo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day22/DayTwentyTwo.cpp.obj
+.PHONY : Year2024/Day22/DayTwentyTwo.cpp.obj
+
+Year2024/Day22/DayTwentyTwo.i: Year2024/Day22/DayTwentyTwo.cpp.i
+.PHONY : Year2024/Day22/DayTwentyTwo.i
+
+# target to preprocess a source file
+Year2024/Day22/DayTwentyTwo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day22/DayTwentyTwo.cpp.i
+.PHONY : Year2024/Day22/DayTwentyTwo.cpp.i
+
+Year2024/Day22/DayTwentyTwo.s: Year2024/Day22/DayTwentyTwo.cpp.s
+.PHONY : Year2024/Day22/DayTwentyTwo.s
+
+# target to generate assembly for a file
+Year2024/Day22/DayTwentyTwo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day22/DayTwentyTwo.cpp.s
+.PHONY : Year2024/Day22/DayTwentyTwo.cpp.s
+
+Year2024/Day23/DayTwentyThree.obj: Year2024/Day23/DayTwentyThree.cpp.obj
+.PHONY : Year2024/Day23/DayTwentyThree.obj
+
+# target to build an object file
+Year2024/Day23/DayTwentyThree.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day23/DayTwentyThree.cpp.obj
+.PHONY : Year2024/Day23/DayTwentyThree.cpp.obj
+
+Year2024/Day23/DayTwentyThree.i: Year2024/Day23/DayTwentyThree.cpp.i
+.PHONY : Year2024/Day23/DayTwentyThree.i
+
+# target to preprocess a source file
+Year2024/Day23/DayTwentyThree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day23/DayTwentyThree.cpp.i
+.PHONY : Year2024/Day23/DayTwentyThree.cpp.i
+
+Year2024/Day23/DayTwentyThree.s: Year2024/Day23/DayTwentyThree.cpp.s
+.PHONY : Year2024/Day23/DayTwentyThree.s
+
+# target to generate assembly for a file
+Year2024/Day23/DayTwentyThree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day23/DayTwentyThree.cpp.s
+.PHONY : Year2024/Day23/DayTwentyThree.cpp.s
+
+Year2024/Day24/DayTwentyFour.obj: Year2024/Day24/DayTwentyFour.cpp.obj
+.PHONY : Year2024/Day24/DayTwentyFour.obj
+
+# target to build an object file
+Year2024/Day24/DayTwentyFour.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day24/DayTwentyFour.cpp.obj
+.PHONY : Year2024/Day24/DayTwentyFour.cpp.obj
+
+Year2024/Day24/DayTwentyFour.i: Year2024/Day24/DayTwentyFour.cpp.i
+.PHONY : Year2024/Day24/DayTwentyFour.i
+
+# target to preprocess a source file
+Year2024/Day24/DayTwentyFour.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day24/DayTwentyFour.cpp.i
+.PHONY : Year2024/Day24/DayTwentyFour.cpp.i
+
+Year2024/Day24/DayTwentyFour.s: Year2024/Day24/DayTwentyFour.cpp.s
+.PHONY : Year2024/Day24/DayTwentyFour.s
+
+# target to generate assembly for a file
+Year2024/Day24/DayTwentyFour.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day24/DayTwentyFour.cpp.s
+.PHONY : Year2024/Day24/DayTwentyFour.cpp.s
+
+Year2024/Day25/DayTwentyFive.obj: Year2024/Day25/DayTwentyFive.cpp.obj
+.PHONY : Year2024/Day25/DayTwentyFive.obj
+
+# target to build an object file
+Year2024/Day25/DayTwentyFive.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day25/DayTwentyFive.cpp.obj
+.PHONY : Year2024/Day25/DayTwentyFive.cpp.obj
+
+Year2024/Day25/DayTwentyFive.i: Year2024/Day25/DayTwentyFive.cpp.i
+.PHONY : Year2024/Day25/DayTwentyFive.i
+
+# target to preprocess a source file
+Year2024/Day25/DayTwentyFive.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day25/DayTwentyFive.cpp.i
+.PHONY : Year2024/Day25/DayTwentyFive.cpp.i
+
+Year2024/Day25/DayTwentyFive.s: Year2024/Day25/DayTwentyFive.cpp.s
+.PHONY : Year2024/Day25/DayTwentyFive.s
+
+# target to generate assembly for a file
+Year2024/Day25/DayTwentyFive.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AdventOfCode.dir\build.make CMakeFiles/AdventOfCode.dir/Year2024/Day25/DayTwentyFive.cpp.s
+.PHONY : Year2024/Day25/DayTwentyFive.cpp.s
 
 Year2024/Day3/DayThree.obj: Year2024/Day3/DayThree.cpp.obj
 .PHONY : Year2024/Day3/DayThree.obj
@@ -644,15 +1052,66 @@ help:
 	@echo ... Year2022/Day7/Directory.obj
 	@echo ... Year2022/Day7/Directory.i
 	@echo ... Year2022/Day7/Directory.s
+	@echo ... Year2023/Day/Day.obj
+	@echo ... Year2023/Day/Day.i
+	@echo ... Year2023/Day/Day.s
+	@echo ... Year2023/Day1/Day1.obj
+	@echo ... Year2023/Day1/Day1.i
+	@echo ... Year2023/Day1/Day1.s
 	@echo ... Year2024/Day1/DayOne.obj
 	@echo ... Year2024/Day1/DayOne.i
 	@echo ... Year2024/Day1/DayOne.s
 	@echo ... Year2024/Day10/DayTen.obj
 	@echo ... Year2024/Day10/DayTen.i
 	@echo ... Year2024/Day10/DayTen.s
+	@echo ... Year2024/Day11/DayEleven.obj
+	@echo ... Year2024/Day11/DayEleven.i
+	@echo ... Year2024/Day11/DayEleven.s
+	@echo ... Year2024/Day12/DayTwelve.obj
+	@echo ... Year2024/Day12/DayTwelve.i
+	@echo ... Year2024/Day12/DayTwelve.s
+	@echo ... Year2024/Day13/DayThirteen.obj
+	@echo ... Year2024/Day13/DayThirteen.i
+	@echo ... Year2024/Day13/DayThirteen.s
+	@echo ... Year2024/Day14/DayFourteen.obj
+	@echo ... Year2024/Day14/DayFourteen.i
+	@echo ... Year2024/Day14/DayFourteen.s
+	@echo ... Year2024/Day15/DayFifteen.obj
+	@echo ... Year2024/Day15/DayFifteen.i
+	@echo ... Year2024/Day15/DayFifteen.s
+	@echo ... Year2024/Day16/DaySixteen.obj
+	@echo ... Year2024/Day16/DaySixteen.i
+	@echo ... Year2024/Day16/DaySixteen.s
+	@echo ... Year2024/Day17/DaySeventeen.obj
+	@echo ... Year2024/Day17/DaySeventeen.i
+	@echo ... Year2024/Day17/DaySeventeen.s
+	@echo ... Year2024/Day18/DayEighteen.obj
+	@echo ... Year2024/Day18/DayEighteen.i
+	@echo ... Year2024/Day18/DayEighteen.s
+	@echo ... Year2024/Day19/DayNineteen.obj
+	@echo ... Year2024/Day19/DayNineteen.i
+	@echo ... Year2024/Day19/DayNineteen.s
 	@echo ... Year2024/Day2/DayTwo.obj
 	@echo ... Year2024/Day2/DayTwo.i
 	@echo ... Year2024/Day2/DayTwo.s
+	@echo ... Year2024/Day20/DayTwenty.obj
+	@echo ... Year2024/Day20/DayTwenty.i
+	@echo ... Year2024/Day20/DayTwenty.s
+	@echo ... Year2024/Day21/DayTwentyOne.obj
+	@echo ... Year2024/Day21/DayTwentyOne.i
+	@echo ... Year2024/Day21/DayTwentyOne.s
+	@echo ... Year2024/Day22/DayTwentyTwo.obj
+	@echo ... Year2024/Day22/DayTwentyTwo.i
+	@echo ... Year2024/Day22/DayTwentyTwo.s
+	@echo ... Year2024/Day23/DayTwentyThree.obj
+	@echo ... Year2024/Day23/DayTwentyThree.i
+	@echo ... Year2024/Day23/DayTwentyThree.s
+	@echo ... Year2024/Day24/DayTwentyFour.obj
+	@echo ... Year2024/Day24/DayTwentyFour.i
+	@echo ... Year2024/Day24/DayTwentyFour.s
+	@echo ... Year2024/Day25/DayTwentyFive.obj
+	@echo ... Year2024/Day25/DayTwentyFive.i
+	@echo ... Year2024/Day25/DayTwentyFive.s
 	@echo ... Year2024/Day3/DayThree.obj
 	@echo ... Year2024/Day3/DayThree.i
 	@echo ... Year2024/Day3/DayThree.s

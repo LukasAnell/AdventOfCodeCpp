@@ -205,7 +205,7 @@ int main() {
     std::cout << "Day10:" << std::endl;
     const Year2024::DayTen dayTenSample("SampleInput.txt", true);
     std::cout << dayTenSample.partOne() << std::endl;
-    //std::cout << dayTenSample.partTwo() << std::endl;
+    std::cout << dayTenSample.partTwo() << std::endl;
     const Year2024::DayTen dayTen("Input.txt", false);
 
     start = std::chrono::steady_clock::now();
@@ -214,7 +214,7 @@ int main() {
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
     start = std::chrono::steady_clock::now();
-    //std::cout << dayTen.partTwo() << " | ";
+    std::cout << dayTen.partTwo() << " | ";
     end = std::chrono::steady_clock::now();
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
