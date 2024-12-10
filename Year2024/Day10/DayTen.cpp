@@ -21,12 +21,11 @@ namespace Year2024 {
         const std::vector<std::vector<bool>>& visited,
         const bool partOne
     ) {
-        const bool isWithinBounds = row >= 0 && row < map.size() && col >= 0 && col < map[0].size();
-        const bool increasesByOne = map[row][col] == prevHeight + 1;
+        const bool isInBounds = row >= 0 && row < map.size() && col >= 0 && col < map[0].size();
         if (partOne) {
-            return isWithinBounds && increasesByOne && !visited[row][col];
+            return isInBounds && map[row][col] == prevHeight + 1 && !visited[row][col];
         }
-        return isWithinBounds && increasesByOne;
+        return isInBounds && map[row][col] == prevHeight + 1;
     }
 
     void DayTen::exploreTrail(
@@ -34,8 +33,7 @@ namespace Year2024 {
         int col,
         const std::vector<std::vector<int>>& map,
         std::vector<std::vector<bool>>& visited,
-        std::unordered_set<std::pair<int, int>,
-        pairHash>& uniqueNines,
+        std::unordered_set<std::pair<int, int>, pairHash>& uniqueNines,
         int& score,
         const bool partOne
     ) {

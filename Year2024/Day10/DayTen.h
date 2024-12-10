@@ -33,8 +33,7 @@ namespace Year2024 {
             int col,
             const std::vector<std::vector<int>>& map,
             std::vector<std::vector<bool>>& visited,
-            std::unordered_set<std::pair<int, int>,
-            pairHash>& uniqueNines,
+            std::unordered_set<std::pair<int, int>, pairHash>& uniqueNines,
             int& score,
             bool partOne
         );
