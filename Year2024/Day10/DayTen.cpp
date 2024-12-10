@@ -13,21 +13,32 @@ namespace Year2024 {
         fileContents = utils::readFile(fileName, 2024, 10, isSample);
     }
 
-    struct DayTen::pairHash {
-        template <class T1, class T2>
-        std::size_t operator() (const std::pair<T1, T2>& pair) const {
-            return std::hash<T1>()(pair.first) ^ std::hash<T2>()(pair.second);
-        }
-    };
-
-    bool DayTen::isValidMove(const int row, const int col, const std::vector<std::vector<int>>& map, const int prevHeight, const std::vector<std::vector<bool>>& visited, const bool partOne) {
+    bool DayTen::isValidMove(
+        const int row,
+        const int col,
+        const std::vector<std::vector<int>>& map,
+        const int prevHeight,
+        const std::vector<std::vector<bool>>& visited,
+        const bool partOne
+    ) {
+        const bool isWithinBounds = row >= 0 && row < map.size() && col >= 0 && col < map[0].size();
+        const bool increasesByOne = map[row][col] == prevHeight + 1;
         if (partOne) {
-            return row >= 0 && row < map.size() && col >= 0 && col < map[0].size() && map[row][col] == prevHeight + 1 && !visited[row][col];
+            return isWithinBounds && increasesByOne && !visited[row][col];
         }
-        return row >= 0 && row < map.size() && col >= 0 && col < map[0].size() && map[row][col] == prevHeight + 1;
+        return isWithinBounds && increasesByOne;
     }
 
-    void DayTen::exploreTrail(int row, int col, const std::vector<std::vector<int>>& map, std::vector<std::vector<bool>>& visited, std::unordered_set<std::pair<int, int>, pairHash>& uniqueNines, int& score, const bool partOne) {
+    void DayTen::exploreTrail(
+        int row,
+        int col,
+        const std::vector<std::vector<int>>& map,
+        std::vector<std::vector<bool>>& visited,
+        std::unordered_set<std::pair<int, int>,
+        pairHash>& uniqueNines,
+        int& score,
+        const bool partOne
+    ) {
         if (map[row][col] == 9) {
             if (partOne) {
                 uniqueNines.emplace(row, col);
