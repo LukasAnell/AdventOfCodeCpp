@@ -4,6 +4,7 @@
 
 #ifndef YEAR2024_DAYELEVEN_H
 #define YEAR2024_DAYELEVEN_H
+#include <mutex>
 #include <string>
 #include <vector>
 
@@ -13,8 +14,9 @@ namespace Year2024 {
         std::vector<std::string> fileContents;
 
         explicit DayEleven(const std::string& fileName, bool isSample);
-        [[nodiscard]] int partOne() const;
-        [[nodiscard]] int partTwo() const;
+        [[nodiscard]] long long bothParts(int iterations) const;
+        [[nodiscard]] long long partOne() const;
+        [[nodiscard]] long long partTwo() const;
     };
 } // Year2024
 
