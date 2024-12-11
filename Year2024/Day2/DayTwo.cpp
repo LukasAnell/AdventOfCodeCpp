@@ -4,6 +4,8 @@
 
 #include "DayTwo.h"
 
+#include <algorithm>
+
 #include "../../Utils/utils.h"
 #include <iostream>
 #include <sstream>
@@ -14,23 +16,7 @@ namespace Year2024 {
     }
 
     bool DayTwo::incrOrDecr(const std::vector<int>& vector) {
-        bool increasing = true;
-        for (int i = 1; i < vector.size(); i++) {
-            if (vector.at(i) < vector.at(i - 1)) {
-                increasing = false;
-                break;
-            }
-        }
-
-        bool decreasing = true;
-        for (int i = 1; i < vector.size(); i++) {
-            if (vector.at(i) > vector.at(i - 1)) {
-                decreasing = false;
-                break;
-            }
-        }
-
-        return increasing || decreasing;
+        return std::ranges::is_sorted(vector, std::greater()) || std::ranges::is_sorted(vector, std::less());
     }
 
     bool DayTwo::withinRange(const std::vector<int>& vector) {
@@ -42,18 +28,21 @@ namespace Year2024 {
         return true;
     }
 
+    std::vector<int> DayTwo::getRowVector(const std::string& row) {
+        std::vector<int> rowVector;
+        std::stringstream rowSs(row);
+        std::string segment;
+        while (std::getline(rowSs, segment, ' ')) {
+            rowVector.push_back(stoi(segment));
+        }
+        return rowVector;
+    }
+
     int DayTwo::partOne() const {
         int count = 0;
         for (const std::string& row : fileContents) {
-            std::stringstream rowSs(row);
-            std::vector<int> rowVector;
-            std::string segment;
-            while (std::getline(rowSs, segment, ' ')) {
-                rowVector.push_back(stoi(segment));
-            }
-
-            const bool incrOrDecr = DayTwo::incrOrDecr(rowVector);
-            if (const bool withinRange = DayTwo::withinRange(rowVector); incrOrDecr && withinRange) {
+            std::vector<int> rowVector = getRowVector(row);
+            if (incrOrDecr(rowVector) && withinRange(rowVector)) {
                 count++;
             }
         }
@@ -63,17 +52,10 @@ namespace Year2024 {
     int DayTwo::partTwo() const {
         int count = 0;
         for (const std::string& row : fileContents) {
-            std::stringstream rowSs(row);
-            std::vector<int> rowVector;
-            std::string segment;
-            while (std::getline(rowSs, segment, ' ')) {
-                rowVector.push_back(stoi(segment));
-            }
-
+            std::vector<int> rowVector = getRowVector(row);
             for (int i = 0; i < rowVector.size(); i++) {
                 std::vector<int> newRowVector = rowVector;
                 newRowVector.erase(newRowVector.begin() + i);
-
                 if (incrOrDecr(newRowVector) && withinRange(newRowVector)) {
                     count++;
                     break;

@@ -6,6 +6,7 @@
 
 #include "../../Utils/utils.h"
 #include <algorithm>
+#include <unordered_map>
 
 namespace Year2024 {
     DayOne::DayOne(const std::string& fileName, const bool isSample) {
@@ -38,20 +39,22 @@ namespace Year2024 {
         for (int i = 0; i < first.size(); i++) {
             distance += abs(first.at(i) - second.at(i));
         }
+
         return distance;
     }
 
     int DayOne::partTwo() const {
         auto [first, second] = constructCols();
+        std::unordered_map<int, int> secondCount;
+        for (const int num : second) {
+            secondCount[num]++;
+        }
+
         int score = 0;
         for (const int firstRowNum : first) {
-            int count = 0;
-            for (const int secondRowNum : second) {
-                if (firstRowNum == secondRowNum) {
-                    count++;
-                }
+            if (secondCount.contains(firstRowNum)) {
+                score += firstRowNum * secondCount[firstRowNum];
             }
-            score += firstRowNum * count;
         }
         return score;
     }

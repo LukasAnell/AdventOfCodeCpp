@@ -14,7 +14,7 @@ namespace Year2024 {
 
     int DayThree::partOne() const {
         int total = 0;
-        const std::regex rgx(R"(mul\(([0-9]{1,3}),([0-9]{1,3})\))");
+        const std::regex rgx(R"(mul\((\d{1,3}),(\d{1,3})\))");
         std::smatch matches;
         for (const std::string& row : fileContents) {
             auto searchStart(row.begin());
@@ -33,12 +33,36 @@ namespace Year2024 {
         const std::regex dontExpr(R"(^don't\(\))");
         std::smatch matches;
         bool enabled = true;
-        for (const std::string& row : fileContents) {
+        for (std::string row : fileContents) {
+            /*
+            int mulIndex = row.find("mul(");
+            int doIndex = row.find("do()");
+            int dontIndex = row.find("don\'t()");
+            row = row.substr(std::min(mulIndex, std::min(doIndex, dontIndex)));
+            while (mulIndex != -1 && (doIndex != -1 || dontIndex != -1)) {
+                if (row.starts_with("do()")) {
+                    enabled = true;
+                }
+                if (row.starts_with("don\'t()")) {
+                    enabled = false;
+                }
+                const bool mulSearch = std::regex_search(row, matches, mulExpr);
+                if(enabled && mulSearch) {
+                    total += stoi(matches[1].str()) * stoi(matches[2].str());
+                }
+
+                mulIndex = row.find("mul(");
+                doIndex = row.find("do()");
+                dontIndex = row.find("don\'()");
+                row = row.substr(std::min(mulIndex, std::min(doIndex, dontIndex)));
+            }
+            */
             for(int i = 0; i < row.size(); i++) {
                 std::string newRow = row.substr(i);
                 const bool doSearch = std::regex_search(newRow, matches, doExpr);
                 const bool dontSearch = std::regex_search(newRow, matches, dontExpr);
-                if (const bool mulSearch = std::regex_search(newRow, matches, mulExpr); !mulSearch && !(doSearch || dontSearch)) {
+                if (const bool mulSearch = std::regex_search(newRow, matches, mulExpr);
+                    !mulSearch && !(doSearch || dontSearch)) {
                     continue;
                 }
                 if(doSearch) {

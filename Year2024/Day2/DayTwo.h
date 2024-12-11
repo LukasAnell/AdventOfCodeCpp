@@ -16,6 +16,7 @@ namespace Year2024 {
         explicit DayTwo(const std::string& fileName, bool isSample);
         [[nodiscard]] static bool incrOrDecr(const std::vector<int>& vector);
         [[nodiscard]] static bool withinRange(const std::vector<int>& vector);
+        [[nodiscard]] static std::vector<int> getRowVector(const std::string& row);
         [[nodiscard]] int partOne() const;
         [[nodiscard]] int partTwo() const;
     };
