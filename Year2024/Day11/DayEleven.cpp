@@ -5,11 +5,7 @@
 #include "DayEleven.h"
 
 #include "../../Utils/utils.h"
-#include <deque>
-#include <iostream>
 #include <numeric>
-#include <ostream>
-#include <string>
 #include <unordered_map>
 
 namespace Year2024 {
@@ -18,12 +14,12 @@ namespace Year2024 {
     }
 
     long long DayEleven::bothParts(const int iterations) const {
-        std::unordered_map<long long, long long> stonesDict;
+        std::unordered_map<long long, long long> stonesMap;
         std::string numStr;
         for (const char ch : fileContents[0]) {
             if (ch == ' ') {
                 if (!numStr.empty()) {
-                    stonesDict[stoll(numStr)]++;
+                    stonesMap[stoll(numStr)]++;
                     numStr.clear();
                 }
             } else {
@@ -31,32 +27,48 @@ namespace Year2024 {
             }
         }
         if (!numStr.empty()) {
-            stonesDict[stoll(numStr)]++;
+            stonesMap[stoll(numStr)]++;
         }
 
         for (int i = 0; i < iterations; i++) {
-            std::vector<std::pair<long long, long long>> stonesList(stonesDict.begin(), stonesDict.end());
-            for (const auto& [key, count] : stonesList) {
-                stonesDict[key] -= count;
+            std::unordered_map<long long, long long> newStonesMap;
+            for (const auto& [key, count] : stonesMap) {
                 if (key == 0) {
-                    stonesDict[1] += count;
+                    newStonesMap[1] += count;
                 } else {
-                    std::string digits = std::to_string(key);
-                    if (digits.size() % 2 == 1) {
-                        stonesDict[key * 2024] += count;
+                    long long leftPart = key;
+                    long long rightPart = 0;
+                    long long multiplier = 1;
+                    long long temp = key;
+                    int numDigits = 0;
+
+                    while (temp > 0) {
+                        temp /= 10;
+                        numDigits++;
+                    }
+
+                    const int halfDigits = numDigits / 2;
+                    for (int j = 0; j < halfDigits; j++) {
+                        rightPart += (leftPart % 10) * multiplier;
+                        leftPart /= 10;
+                        multiplier *= 10;
+                    }
+
+                    if (numDigits % 2 == 1) {
+                        newStonesMap[key * 2024] += count;
                     } else {
-                        stonesDict[stoll(digits.substr(0, digits.size() / 2))] += count;
-                        stonesDict[stoll(digits.substr(digits.size() / 2))] += count;
+                        newStonesMap[leftPart] += count;
+                        newStonesMap[rightPart] += count;
                     }
                 }
             }
+            stonesMap = std::move(newStonesMap);
         }
 
-        return std::accumulate(stonesDict.begin(), stonesDict.end(), 0LL, [](unsigned long long sum, const auto& pair) {
+        return std::accumulate(stonesMap.begin(), stonesMap.end(), 0LL, [](long long sum, const auto& pair) {
             return sum + pair.second;
         });
     }
-
 
     long long DayEleven::partOne() const {
         return bothParts(25);
@@ -65,5 +77,4 @@ namespace Year2024 {
     long long DayEleven::partTwo() const {
         return bothParts(75);
     }
-
 } // Year2024
