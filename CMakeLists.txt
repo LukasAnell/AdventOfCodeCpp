@@ -1,9 +1,6 @@
 cmake_minimum_required(VERSION 3.29)
 project(AdventOfCode)
 
-add_subdirectory(Source/abseil-cpp)
-include_directories(Source/abseil-cpp)
-
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(
@@ -83,5 +80,3 @@ add_executable(
         Year2023/Day1/Day1.cpp
         Year2023/Day1/Day1.h
 )
-
-target_link_libraries(AdventOfCode absl::flat_hash_map)

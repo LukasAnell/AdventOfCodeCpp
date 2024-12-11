@@ -1,9 +1,9 @@
 # ninja log v6
 12668	14555	7556483123615900	CMakeFiles/AdventOfCode.dir/Year2022/Day3/DayThree.cpp.obj	812a8b32f0006e93
 15380	16483	7556483150731597	CMakeFiles/AdventOfCode.dir/Year2024/Day13/DayThirteen.cpp.obj	40e3da48c7c2f336
-12465	16723	7556483121585924	CMakeFiles/AdventOfCode.dir/main.cpp.obj	16c8d969d027d2eb
+35	2299	7556500838963686	CMakeFiles/AdventOfCode.dir/main.cpp.obj	16c8d969d027d2eb
 11435	13550	7556483111284847	Source/abseil-cpp/absl/container/CMakeFiles/absl_hashtablez_sampler.dir/internal/hashtablez_sampler_force_weak_definition.cc.obj	41eea3adc821ee90
-36	1367	7556484567940763	CMakeFiles/AdventOfCode.dir/Year2024/Day11/DayEleven.cpp.obj	b21f33ad34d93ed8
+38	1225	7556508657310091	CMakeFiles/AdventOfCode.dir/Year2024/Day11/DayEleven.cpp.obj	b21f33ad34d93ed8
 12944	14899	7556483126380655	CMakeFiles/AdventOfCode.dir/Year2022/Day4/DayFour.cpp.obj	8d41f7fbb997d1c
 6040	8466	7556483057337778	Source/abseil-cpp/absl/crc/CMakeFiles/absl_crc32c.dir/crc32c.cc.obj	eea1f157dc256d19
 12573	14347	7556483122669122	CMakeFiles/AdventOfCode.dir/Year2022/Day1/DayOne.cpp.obj	2b4f9c71b79e6e13
@@ -11,7 +11,7 @@
 7562	7783	7556483072559364	Source/abseil-cpp/absl/debugging/libabsl_demangle_internal.a	6324e1ec5bbf877d
 14899	16733	7556483145928823	CMakeFiles/AdventOfCode.dir/Year2024/Day9/DayNine.cpp.obj	b24bbdd37484d39a
 8687	11244	7556483083808396	Source/abseil-cpp/absl/synchronization/CMakeFiles/absl_synchronization.dir/internal/stdcpp_waiter.cc.obj	38d8c2adb8d6ce
-1368	8948	7556484581259279	AdventOfCode.exe	aad13d724481d302
+1226	8345	7556508669180641	AdventOfCode.exe	aad13d724481d302
 15253	16546	7556483149458069	CMakeFiles/AdventOfCode.dir/Year2024/Day12/DayTwelve.cpp.obj	439d1cea56ea836a
 16631	17939	7556483163243994	CMakeFiles/AdventOfCode.dir/Year2024/Day21/DayTwentyOne.cpp.obj	bd6186c42aa3c271
 11128	12038	7556483108214292	Source/abseil-cpp/absl/types/CMakeFiles/absl_bad_optional_access.dir/bad_optional_access.cc.obj	e6a5b4cb37eaa7fb
@@ -22,7 +22,7 @@
 13215	14979	7556483129088802	CMakeFiles/AdventOfCode.dir/Year2022/Day6/DaySix.cpp.obj	923f3e5144cdc5d8
 13871	15241	7556483135651636	CMakeFiles/AdventOfCode.dir/Year2022/Day7/Directory.cpp.obj	55db9bb960a4b1d4
 13551	14844	7556483132441652	CMakeFiles/AdventOfCode.dir/Year2022/Day7/DaySeven.cpp.obj	575b914256c1a706
-4	1577	7556497409602802	build.ninja	bb3c972f7d55b6f3
+4	1577	7556618336210316	build.ninja	bb3c972f7d55b6f3
 16362	16631	7556483160561728	Source/abseil-cpp/absl/container/libabsl_hashtablez_sampler.a	5eaad52d84e3c4a
 10466	10857	7556483101601771	Source/abseil-cpp/absl/strings/libabsl_str_format_internal.a	2456e6a89db1d1a7
 118	1369	7556482998111523	Source/abseil-cpp/absl/strings/CMakeFiles/absl_strings_internal.dir/internal/ostringstream.cc.obj	be69bbc58d0c4653
@@ -183,19 +183,3 @@
 16197	16431	7556483158900959	Source/abseil-cpp/absl/strings/libabsl_cordz_info.a	2333af88fd47278a
 18123	18547	7556483178172807	Source/abseil-cpp/absl/strings/libabsl_cord.a	3ea3a60de1eb4311
 18547	18665	7556483182408432	Source/abseil-cpp/absl/container/libabsl_raw_hash_set.a	b41eed00d765f8cd
-42	2375	7556498124595465	CMakeFiles/AdventOfCode.dir/main.cpp.obj	16c8d969d027d2eb
-2376	9884	7556498147922685	AdventOfCode.exe	aad13d724481d302
-35	2299	7556500838963686	CMakeFiles/AdventOfCode.dir/main.cpp.obj	16c8d969d027d2eb
-2300	9951	7556500861615346	AdventOfCode.exe	aad13d724481d302
-42	1339	7556501960865543	CMakeFiles/AdventOfCode.dir/Year2024/Day11/DayEleven.cpp.obj	b21f33ad34d93ed8
-1339	9113	7556501973833356	AdventOfCode.exe	aad13d724481d302
-38	1344	7556502163350872	CMakeFiles/AdventOfCode.dir/Year2024/Day11/DayEleven.cpp.obj	b21f33ad34d93ed8
-1345	9121	7556502176418545	AdventOfCode.exe	aad13d724481d302
-40	1477	7556507453945415	CMakeFiles/AdventOfCode.dir/Year2024/Day11/DayEleven.cpp.obj	b21f33ad34d93ed8
-1478	8973	7556507468321139	AdventOfCode.exe	aad13d724481d302
-45	1434	7556508201288134	CMakeFiles/AdventOfCode.dir/Year2024/Day11/DayEleven.cpp.obj	b21f33ad34d93ed8
-1435	9154	7556508215189993	AdventOfCode.exe	aad13d724481d302
-37	1272	7556508464348582	CMakeFiles/AdventOfCode.dir/Year2024/Day11/DayEleven.cpp.obj	b21f33ad34d93ed8
-1273	8717	7556508476705110	AdventOfCode.exe	aad13d724481d302
-38	1225	7556508657310091	CMakeFiles/AdventOfCode.dir/Year2024/Day11/DayEleven.cpp.obj	b21f33ad34d93ed8
-1226	8345	7556508669180641	AdventOfCode.exe	aad13d724481d302
