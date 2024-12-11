@@ -39,12 +39,9 @@ namespace Year2024 {
                 stonesMap.erase(0);
             }
             for (const auto& [key, count] : stonesMap) {
-                long long leftPart = key;
-                long long rightPart = 0;
-                long long multiplier = 1;
-                long long temp = key;
-                int numDigits = 0;
+                long long leftPart = key, rightPart = 0, multiplier = 1, temp = key;
 
+                int numDigits = 0;
                 while (temp > 0) {
                     temp /= 10;
                     numDigits++;
