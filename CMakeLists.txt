@@ -5,10 +5,10 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(
         AdventOfCode main.cpp
-        Year2022/Day1/dayOne.cpp
-        Year2022/Day1/dayOne.h
         Utils/utils.cpp
         Utils/utils.h
+        Year2022/Day1/dayOne.cpp
+        Year2022/Day1/dayOne.h
         Year2022/Day2/DayTwo.cpp
         Year2022/Day2/DayTwo.h
         Year2022/Day2/DayTwo.cpp

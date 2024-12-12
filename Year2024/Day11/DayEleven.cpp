@@ -16,49 +16,52 @@ namespace Year2024 {
     long long DayEleven::bothParts(const int iterations) const {
         std::unordered_map<long long, long long> stonesMap;
         stonesMap.reserve(fileContents[0].size() / 2);
-        long long num = 0;
+        std::string numStr;
         for (const char ch : fileContents[0]) {
             if (ch == ' ') {
-                if (num != 0) {
-                    stonesMap[num]++;
-                    num = 0;
+                if (!numStr.empty()) {
+                    stonesMap[stoll(numStr)]++;
+                    numStr.clear();
                 }
             } else {
-                num = num * 10 + (ch - '0');
+                numStr += ch;
             }
         }
-        if (num != 0) {
-            stonesMap[num]++;
+        if (!numStr.empty()) {
+            stonesMap[stoll(numStr)]++;
         }
 
         for (int i = 0; i < iterations; i++) {
             std::unordered_map<long long, long long> newStonesMap;
             newStonesMap.reserve(stonesMap.size());
-            if (stonesMap.contains(0)) {
-                newStonesMap[1] += stonesMap[0];
-                stonesMap.erase(0);
-            }
             for (const auto& [key, count] : stonesMap) {
-                long long leftPart = key, rightPart = 0, multiplier = 1, temp = key;
-
-                int numDigits = 0;
-                while (temp > 0) {
-                    temp /= 10;
-                    numDigits++;
-                }
-
-                const int halfDigits = numDigits / 2;
-                for (int j = 0; j < halfDigits; j++) {
-                    rightPart += (leftPart % 10) * multiplier;
-                    leftPart /= 10;
-                    multiplier *= 10;
-                }
-
-                if (numDigits % 2 == 1) {
-                    newStonesMap[key * 2024] += count;
+                if (key == 0) {
+                    newStonesMap[1] += count;
                 } else {
-                    newStonesMap[leftPart] += count;
-                    newStonesMap[rightPart] += count;
+                    long long leftPart = key;
+                    long long rightPart = 0;
+                    long long multiplier = 1;
+                    long long temp = key;
+                    int numDigits = 0;
+
+                    while (temp > 0) {
+                        temp /= 10;
+                        numDigits++;
+                    }
+
+                    const int halfDigits = numDigits / 2;
+                    for (int j = 0; j < halfDigits; j++) {
+                        rightPart += (leftPart % 10) * multiplier;
+                        leftPart /= 10;
+                        multiplier *= 10;
+                    }
+
+                    if (numDigits % 2 == 1) {
+                        newStonesMap[key * 2024] += count;
+                    } else {
+                        newStonesMap[leftPart] += count;
+                        newStonesMap[rightPart] += count;
+                    }
                 }
             }
             stonesMap = std::move(newStonesMap);
