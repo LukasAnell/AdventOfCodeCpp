@@ -242,8 +242,8 @@ int main() {
 
     std::cout << "Day12:" << std::endl;
     const Year2024::DayTwelve dayTwelveSample("SampleInput.txt", true);
-    std::cout << dayTwelveSample.partOne() << std::endl;
-    std::cout << dayTwelveSample.partTwo() << std::endl;
+    //std::cout << dayTwelveSample.partOne() << std::endl;
+    //std::cout << dayTwelveSample.partTwo() << std::endl;
     const Year2024::DayTwelve dayTwelve("Input.txt", false);
 
     start = std::chrono::steady_clock::now();

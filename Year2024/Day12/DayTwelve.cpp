@@ -16,10 +16,16 @@ namespace Year2024 {
         fileContents = utils::readFile(fileName, 2024, 12, isSample);
     }
 
-    void DayTwelve::dfs1(int r, int c, const char currentChar, std::set<std::pair<int, int> > &visited, int &area, int &sides) const {
+    void DayTwelve::dfs1(
+        int r,
+        int c,
+        const char currentChar,
+        std::set<std::pair<int, int>> &visited,
+        int &area,
+        int &sides
+    ) const {
         const int rows = static_cast<int>(fileContents.size());
         const int cols = static_cast<int>(fileContents[0].size());
-        const std::vector<std::pair<int, int>> directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
         visited.emplace(r, c);
         area++;
@@ -27,7 +33,9 @@ namespace Year2024 {
         for (const auto& [dr, dc] : directions) {
             int newRow = r + dr;
             int newCol = c + dc;
-            if (newRow < 0 || newRow >= rows || newCol < 0 || newCol >= cols || fileContents[newRow][newCol] != currentChar) {
+            if (newRow < 0 || newRow >= rows || newCol < 0 || newCol >= cols ||
+                fileContents[newRow][newCol] != currentChar
+            ) {
                 sides++;
             } else if (!visited.contains({newRow, newCol})) {
                 dfs1(newRow, newCol, currentChar, visited, area, sides);
@@ -58,10 +66,16 @@ namespace Year2024 {
         return sum;
     }
 
-    void DayTwelve::dfs2(int r, int c, const char currentChar, std::set<std::pair<int, int>>& visited, std::set<std::pair<int, int>>& region) const {
+    void DayTwelve::dfs2(
+        int r,
+        int c,
+        const char currentChar,
+        std::set<std::pair<int, int>>& visited,
+        std::set<std::pair<int, int>>& region
+    ) const {
         const int rows = static_cast<int>(fileContents.size());
         const int cols = static_cast<int>(fileContents[0].size());
-        const std::vector<std::pair<int, int>> directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+
 
         visited.emplace(r, c);
         region.emplace(r, c);
@@ -69,7 +83,11 @@ namespace Year2024 {
         for (const auto& [dr, dc] : directions) {
             const int newRow = r + dr;
             const int newCol = c + dc;
-            if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols && fileContents[newRow][newCol] == currentChar && !visited.contains({newRow, newCol})) {
+            if (
+                newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols &&
+                fileContents[newRow][newCol] == currentChar &&
+                !visited.contains({newRow, newCol})
+            ) {
                 dfs2(newRow, newCol, currentChar, visited, region);
             }
         }
@@ -78,58 +96,58 @@ namespace Year2024 {
     int DayTwelve::findEdges(const std::set<std::pair<int, int>>& area) {
         int edges = 0;
 
-        const int min_i = std::ranges::min_element(area,
+        const int iMin = std::ranges::min_element(area,
             [](const auto& a, const auto& b) {
                 return a.first < b.first;
             }) -> first;
-        const int max_i = std::ranges::max_element(area,
+        const int iMax = std::ranges::max_element(area,
             [](const auto& a, const auto& b) {
                 return a.first < b.first;
             }) -> first;
-        const int min_j = std::ranges::min_element(area,
+        const int jMin = std::ranges::min_element(area,
             [](const auto& a, const auto& b) {
                 return a.second < b.second;
             }) -> second;
-        const int max_j = std::ranges::max_element(area,
+        const int jMax = std::ranges::max_element(area,
             [](const auto& a, const auto& b) {
                 return a.second < b.second;
             }) -> second;
 
-        for (int i = min_i; i <= max_i; ++i) {
-            bool top_was_edge = false;
-            bool bottom_was_edge = false;
-            for (int j = min_j; j <= max_j; ++j) {
-                const bool top_is_edge = area.contains({i, j}) && !area.contains({i - 1, j});
-                const bool bottom_is_edge = area.contains({i, j}) && !area.contains({i + 1, j});
+        for (int i = iMin; i <= iMax; i++) {
+            bool prevTopEdge = false;
+            bool prevBotEdge = false;
+            for (int j = jMin; j <= jMax; j++) {
+                const bool currTopEdge = area.contains({i, j}) && !area.contains({i - 1, j});
+                const bool currBotEdge = area.contains({i, j}) && !area.contains({i + 1, j});
 
-                if (top_is_edge && !top_was_edge) {
+                if (currTopEdge && !prevTopEdge) {
                     edges++;
                 }
-                if (bottom_is_edge && !bottom_was_edge) {
+                if (currBotEdge && !prevBotEdge) {
                     edges++;
                 }
 
-                top_was_edge = top_is_edge;
-                bottom_was_edge = bottom_is_edge;
+                prevTopEdge = currTopEdge;
+                prevBotEdge = currBotEdge;
             }
         }
 
-        for (int j = min_j; j <= max_j; ++j) {
-            bool left_was_edge = false;
-            bool right_was_edge = false;
-            for (int i = min_i; i <= max_i; ++i) {
-                const bool left_is_edge = area.contains({i, j}) && !area.contains({i, j - 1});
-                const bool right_is_edge = area.contains({i, j}) && !area.contains({i, j + 1});
+        for (int j = jMin; j <= jMax; j++) {
+            bool prevLeftEdge = false;
+            bool prevRightEdge = false;
+            for (int i = iMin; i <= iMax; i++) {
+                const bool currLeftEdge = area.contains({i, j}) && !area.contains({i, j - 1});
+                const bool currRightEdge = area.contains({i, j}) && !area.contains({i, j + 1});
 
-                if (left_is_edge && !left_was_edge) {
+                if (currLeftEdge && !prevLeftEdge) {
                     edges++;
                 }
-                if (right_is_edge && !right_was_edge) {
+                if (currRightEdge && !prevRightEdge) {
                     edges++;
                 }
 
-                left_was_edge = left_is_edge;
-                right_was_edge = right_is_edge;
+                prevLeftEdge = currLeftEdge;
+                prevRightEdge = currRightEdge;
             }
         }
 

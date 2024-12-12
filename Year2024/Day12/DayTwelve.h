@@ -14,11 +14,25 @@ namespace Year2024 {
     class DayTwelve {
     public:
         std::vector<std::string> fileContents;
+        const std::vector<std::pair<int, int>> directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
         explicit DayTwelve(const std::string& fileName, bool isSample);
-        void dfs1(int r, int c, char currentChar, std::set<std::pair<int, int>>& visited, int& area, int& sides) const;
+        void dfs1(
+            int r,
+            int c,
+            char currentChar,
+            std::set<std::pair<int, int>>& visited,
+            int& area,
+            int& sides
+        ) const;
         [[nodiscard]] int partOne() const;
-        void dfs2(int r, int c, char currentChar, std::set<std::pair<int, int>>& visited, std::set<std::pair<int, int>>& region) const;
+        void dfs2(
+            int r,
+            int c,
+            char currentChar,
+            std::set<std::pair<int, int>>& visited,
+            std::set<std::pair<int, int>>& region
+        ) const;
         [[nodiscard]] static int findEdges(const std::set<std::pair<int, int>>& area);
         [[nodiscard]] int partTwo() const;
     };
