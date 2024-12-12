@@ -53,7 +53,7 @@ namespace Year2024 {
         }
 
         int sum = 0;
-        for (const auto& [key, price] : totalPrice) {
+        for (const auto& price : totalPrice | std::ranges::views::values) {
             sum += price;
         }
         return sum;
@@ -76,7 +76,7 @@ namespace Year2024 {
         }
     }
 
-    int findEdges(const std::set<std::pair<int, int>>& area) {
+    int DayTwelve::findEdges(const std::set<std::pair<int, int>>& area) {
         int edges = 0;
 
         const int min_i = std::ranges::min_element(area,

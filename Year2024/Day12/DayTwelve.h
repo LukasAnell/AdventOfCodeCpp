@@ -19,6 +19,7 @@ namespace Year2024 {
         void dfs1(int r, int c, char currentChar, std::set<std::pair<int, int>>& visited, int& area, int& sides) const;
         [[nodiscard]] int partOne() const;
         void dfs2(int r, int c, char currentChar, std::set<std::pair<int, int>>& visited, std::set<std::pair<int, int>>& region) const;
+        [[nodiscard]] static int findEdges(const std::set<std::pair<int, int>>& area);
         [[nodiscard]] int partTwo() const;
     };
 } // Year2024
