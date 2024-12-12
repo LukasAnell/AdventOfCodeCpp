@@ -4,11 +4,10 @@
 
 #include "DayTwelve.h"
 
+#include "../../Utils/utils.h"
 #include <algorithm>
 #include <ranges>
 #include <set>
-
-#include "../../Utils/utils.h"
 #include <string>
 #include <unordered_map>
 
