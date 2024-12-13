@@ -238,12 +238,12 @@ int main() {
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
     std::cout << std::endl;
-*/
+
 
     std::cout << "Day12:" << std::endl;
     const Year2024::DayTwelve dayTwelveSample("SampleInput.txt", true);
-    std::cout << dayTwelveSample.partOne() << std::endl;
-    std::cout << dayTwelveSample.partTwo() << std::endl;
+    //std::cout << dayTwelveSample.partOne() << std::endl;
+    //std::cout << dayTwelveSample.partTwo() << std::endl;
     const Year2024::DayTwelve dayTwelve("Input.txt", false);
 
     start = std::chrono::steady_clock::now();
@@ -257,27 +257,27 @@ int main() {
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
     std::cout << std::endl;
+*/
 
-/*
     std::cout << "Day13:" << std::endl;
     const Year2024::DayThirteen dayThirteenSample("SampleInput.txt", true);
-    //std::cout << dayThirteenSample.partOne() << std::endl;
-    //std::cout << dayThirteenSample.partTwo() << std::endl;
+    std::cout << dayThirteenSample.partOne() << std::endl;
+    std::cout << dayThirteenSample.partTwo() << std::endl;
     const Year2024::DayThirteen dayThirteen("Input.txt", false);
 
     start = std::chrono::steady_clock::now();
-    //std::cout << dayThirteen.partOne() << " | ";
+    std::cout << dayThirteen.partOne() << " | ";
     end = std::chrono::steady_clock::now();
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
     start = std::chrono::steady_clock::now();
-    //std::cout << dayThirteen.partTwo() << " | ";
+    std::cout << dayThirteen.partTwo() << " | ";
     end = std::chrono::steady_clock::now();
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
     std::cout << std::endl;
 
-
+/*
     std::cout << "Day14:" << std::endl;
     const Year2024::DayFourteen dayFourteenSample("SampleInput.txt", true);
     //std::cout << dayFourteenSample.partOne() << std::endl;
