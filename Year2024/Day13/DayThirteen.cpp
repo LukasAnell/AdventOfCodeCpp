@@ -105,10 +105,10 @@ namespace Year2024 {
         }
 
         long long totalTokens = 0;
-        for (auto& prizeInstructions: prizesVec) {
-            const std::pair aInstr = {prizeInstructions.second[0].second.first, prizeInstructions.second[0].second.second};
-            const std::pair bInstr = {prizeInstructions.second[1].second.first, prizeInstructions.second[1].second.second};
-            const std::pair prizeLoc = {prizeInstructions.first.first, prizeInstructions.first.second};
+        for (auto&[prize, instructions]: prizesVec) {
+            const std::pair aInstr = {instructions[0].second.first, instructions[0].second.second};
+            const std::pair bInstr = {instructions[1].second.first, instructions[1].second.second};
+            const std::pair prizeLoc = {prize.first, prize.second};
 
             const double bPresses = (static_cast<double>(aInstr.first) * prizeLoc.second - prizeLoc.first * aInstr.second) / (aInstr.first * bInstr.second - bInstr.first * aInstr.second);
             const double aPresses = (static_cast<double>(prizeLoc.first) - bPresses * bInstr.first) / (aInstr.first);
