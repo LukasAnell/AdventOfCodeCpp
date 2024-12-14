@@ -12,9 +12,18 @@ namespace Year2024 {
     public:
         std::vector<std::string> fileContents;
 
+        struct pairHash {
+            template <class T1, class T2>
+            std::size_t operator() (const std::pair<T1, T2>& pair) const {
+                return std::hash<T1>()(pair.first) ^ std::hash<T2>()(pair.second);
+            }
+        };
+
         explicit DayFourteen(const std::string& fileName, bool isSample);
-        [[nodiscard]] int partOne() const;
-        [[nodiscard]] int partTwo() const;
+        [[nodiscard]] static int constructNum(const std::string &line, int index);
+        [[nodiscard]] int partOne(int height, int width) const;
+        [[nodiscard]] static std::vector<std::pair<int, int>> fourNeighborCoords(int x, int y, int width, int height);
+        [[nodiscard]] int partTwo(int height, int width) const;
     };
 } // Year2024
 
