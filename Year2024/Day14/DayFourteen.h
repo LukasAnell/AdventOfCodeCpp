@@ -20,6 +20,7 @@ namespace Year2024 {
         };
 
         explicit DayFourteen(const std::string& fileName, bool isSample);
+        [[nodiscard]] std::vector<std::pair<std::pair<int, int>, std::pair<int, int>>> getRobots() const;
         [[nodiscard]] static int constructNum(const std::string &line, int index);
         [[nodiscard]] int partOne(int height, int width) const;
         [[nodiscard]] static std::vector<std::pair<int, int>> fourNeighborCoords(int x, int y, int width, int height);

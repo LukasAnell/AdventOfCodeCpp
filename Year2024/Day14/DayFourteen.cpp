@@ -18,6 +18,18 @@ namespace Year2024 {
         fileContents = utils::readFile(fileName, 2024, 14, isSample);
     }
 
+    std::vector<std::pair<std::pair<int, int>, std::pair<int, int>>> DayFourteen::getRobots() const {
+        std::vector<std::pair<std::pair<int, int>, std::pair<int, int>>> robots;
+        for (std::string line : fileContents) {
+            std::string positionStr = line.substr(2, line.find(" v="));
+            std::string velocityStr = line.substr(line.find(" v=") + 3);
+            std::pair position = {stoi(positionStr.substr(0, positionStr.find(","))), stoi(positionStr.substr(positionStr.find(",") + 1))};
+            std::pair velocity = {stoi(velocityStr.substr(0, velocityStr.find(","))), stoi(velocityStr.substr(velocityStr.find(",") + 1))};
+            robots.emplace_back(std::pair(position, velocity));
+        }
+        return robots;
+    }
+
     int DayFourteen::constructNum(const std::string &line, const int index) {
         std::string out = "";
         for (int i = index; i < line.size(); i++) {
@@ -30,15 +42,7 @@ namespace Year2024 {
     }
 
     int DayFourteen::partOne(const int height, const int width) const {
-        std::vector<std::pair<std::pair<int, int>, std::pair<int, int>>> robots;
-        for (std::string line : fileContents) {
-            std::string positionStr = line.substr(2, line.find(" v="));
-            std::string velocityStr = line.substr(line.find(" v=") + 3);
-            std::pair position = {stoi(positionStr.substr(0, positionStr.find(","))), stoi(positionStr.substr(positionStr.find(",") + 1))};
-            std::pair velocity = {stoi(velocityStr.substr(0, velocityStr.find(","))), stoi(velocityStr.substr(velocityStr.find(",") + 1))};
-            robots.emplace_back(std::pair(position, velocity));
-        }
-
+        auto robots = getRobots();
         for (int i = 0; i < 100; i++) {
             for (auto& robot : robots) {
                 robot.first.first = (robot.first.first + robot.second.first + width) % width;
@@ -71,7 +75,7 @@ namespace Year2024 {
     }
 
     int DayFourteen::partTwo(const int height, const int width) const {
-        std::vector<std::pair<std::pair<int, int>, std::pair<int, int>>> robots;
+        auto robots = getRobots();
         for (const std::string& line : fileContents) {
             std::string positionStr = line.substr(2, line.find(" v="));
             std::string velocityStr = line.substr(line.find(" v=") + 3);
@@ -80,7 +84,7 @@ namespace Year2024 {
             robots.emplace_back(std::pair(position, velocity));
         }
 
-        std::unordered_map<int, int> heuristic;
+        std::unordered_map<int, int> positions;
 
         for (int t = 0; t <= height * width; t++) {
             std::unordered_set<std::pair<int, int>, pairHash> sparse;
@@ -93,13 +97,13 @@ namespace Year2024 {
             for (const auto& [x, y] : sparse) {
                 for (const auto& [nx, ny] : fourNeighborCoords(x, y, width, height)) {
                     if (sparse.contains({nx, ny})) {
-                        heuristic[t]++;
+                        positions[t]++;
                     }
                 }
             }
         }
 
-        const int bestTime = std::ranges::max_element(heuristic,
+        const int bestTime = std::ranges::max_element(positions,
             [](const auto& a, const auto& b) {
                 return a.second < b.second;
             }) -> first;
