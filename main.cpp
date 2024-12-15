@@ -276,7 +276,7 @@ int main() {
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
     std::cout << std::endl;
-*/
+
 
     std::cout << "Day14:" << std::endl;
     const Year2024::DayFourteen dayFourteenSample("SampleInput.txt", true);
@@ -295,8 +295,8 @@ int main() {
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
     std::cout << std::endl;
+*/
 
-/*
     std::cout << "Day15:" << std::endl;
     const Year2024::DayFifteen dayFifteenSample("SampleInput.txt", true);
     //std::cout << dayFifteenSample.partOne() << std::endl;
@@ -304,18 +304,18 @@ int main() {
     const Year2024::DayFifteen dayFifteen("Input.txt", false);
 
     start = std::chrono::steady_clock::now();
-    //std::cout << dayFifteen.partOne() << " | ";
+    std::cout << dayFifteen.partOne() << " | ";
     end = std::chrono::steady_clock::now();
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
     start = std::chrono::steady_clock::now();
-    //std::cout << dayFifteen.partTwo() << " | ";
+    std::cout << dayFifteen.partTwo() << " | ";
     end = std::chrono::steady_clock::now();
     std::cout << std::chrono::duration<double, std::milli>(end - start).count() << " ms" << std::endl;
 
     std::cout << std::endl;
 
-
+/*
     std::cout << "Day16:" << std::endl;
     const Year2024::DaySixteen daySixteenSample("SampleInput.txt", true);
     //std::cout << daySixteenSample.partOne() << std::endl;
