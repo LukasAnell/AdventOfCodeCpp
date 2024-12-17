@@ -3,10 +3,10 @@
 //
 
 #include "utils.h"
-
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <regex>
 
 std::vector<std::string> utils::readFile(const std::string& fileName, const int year, const int dayNumber, const bool isSample) {
     std::string fullFileName = "..\\Year" + std::to_string(year) + "\\";
@@ -31,4 +31,29 @@ std::vector<std::string> utils::readFile(const std::string& fileName, const int 
     }
 
     return output;
+}
+
+std::vector<std::string> utils::splitString(const std::string& input, const std::string& delimiter) {
+    std::vector<std::string> output;
+    size_t start = 0;
+    size_t end = input.find(delimiter);
+    while (end != std::string::npos) {
+        output.push_back(input.substr(start, end - start));
+        start = end + delimiter.size();
+        end = input.find(delimiter, start);
+    }
+    output.push_back(input.substr(start, end));
+    return output;
+}
+
+std::vector<int> utils::extractInts(const std::string& str) {
+    std::vector<int> result;
+    const std::regex re("-?\\d+");
+    std::sregex_iterator next(str.begin(), str.end(), re);
+    const std::sregex_iterator end;
+    while (next != end) {
+        result.push_back(std::stoi(next->str()));
+        ++next;
+    }
+    return result;
 }
