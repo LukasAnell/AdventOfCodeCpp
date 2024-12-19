@@ -14,7 +14,7 @@ namespace Year2024 {
 
         explicit DayNineteen(const std::string& fileName, bool isSample);
         [[nodiscard]] int partOne() const;
-        [[nodiscard]] int partTwo() const;
+        [[nodiscard]] long long partTwo() const;
     };
 } // Year2024
 
