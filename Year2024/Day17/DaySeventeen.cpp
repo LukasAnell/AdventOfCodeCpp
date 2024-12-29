@@ -196,6 +196,7 @@ namespace Year2024 {
     }
 
     long long DaySeventeen::partTwo() {
+        // hardcoded because idk how to make a general case
         const std::vector program = {2, 4, 1, 3, 7, 5, 1, 5, 0, 3, 4, 1, 5, 5, 3, 0};
         return findInitialA(program);
     }
